@@ -12,7 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
-  const pathname = usePathname();
   // this is really not how i should this but whatevs
 
   const updateCharacter = async (characterId: string) => {
