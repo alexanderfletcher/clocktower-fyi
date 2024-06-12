@@ -37,7 +37,6 @@ const formatOtherJinx = (
   characterName: string
 ): ((data: JinxData) => IndividualJinxData[]) => {
   return (data: JinxData): IndividualJinxData[] => {
-    console.log({ data });
     return data.jinx
       .filter((jinx) => jinx.id === characterName)
       .map(({ id, reason }) => {
@@ -64,7 +63,7 @@ export function Jinxes({ character }: Props) {
   return (
     <div className="w-3/4">
       {characterJinxes.map(({ jinxer, reason }) => (
-        <JinxCard jinxer={jinxer} reason={reason} />
+        <JinxCard jinxer={jinxer} reason={reason} key={jinxer} />
       ))}
     </div>
   );
