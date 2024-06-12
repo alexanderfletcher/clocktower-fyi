@@ -11,6 +11,7 @@ import {
   usePathname,
   useSearchParams,
 } from "next/navigation";
+import { Jinxes } from "@/components/Jinxes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +26,11 @@ export default function Home() {
 
   const characterSelected = findCharacter(router.query.character);
 
-  console.log({ characterSelected });
   const updateCharacter = async (characterId: string) => {
     const character = CHARACTER_DATA.find(({ id }) => id === characterId);
+    if (!character) return;
     router.push(`/characters/${character?.id}`);
   };
-
   return (
     <>
       <div className={"absolute p-10 right-0"}>{/* <DarkModeSwitch /> */}</div>
@@ -42,10 +42,13 @@ export default function Home() {
         <div className="p-5"></div>
         <CharacterIconInput onSubmit={updateCharacter} />
         {characterSelected && (
-          <Info
-            source={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterSelected.id}.png`}
-            data={characterSelected}
-          />
+          <>
+            <Info
+              source={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterSelected.id}.png`}
+              data={characterSelected}
+            />
+            <Jinxes character={characterSelected} />
+          </>
         )}
         <div className="p-2"></div>
         <Alert className="w-2/3">

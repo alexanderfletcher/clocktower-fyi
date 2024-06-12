@@ -1,5 +1,11 @@
 export type CharacterData = (typeof CHARACTER_DATA)[number];
 
+export const characterNameToId = (
+  characterName: string
+): string | undefined => {
+  return CHARACTER_DATA.find((char) => char.name === characterName)?.id;
+};
+
 export const CHARACTER_DATA = [
   {
     id: "washerwoman",

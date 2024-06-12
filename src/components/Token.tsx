@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CharacterData } from "./characterData";
 
 type TokenProps = {
@@ -11,6 +12,9 @@ export function Info({ data, source }: TokenProps) {
       <div className="flex items-center justify-center">
         <img height={150} width={180} src={source}></img>
       </div>
+      <Link href={`https://wiki.bloodontheclocktower.com/${data.name}`}>
+        <h2 className="text-2xl font-bold">{data.name}</h2>
+      </Link>
       <p className="text-lg">{data.ability}</p>
     </div>
   );

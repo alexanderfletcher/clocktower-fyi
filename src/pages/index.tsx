@@ -15,10 +15,6 @@ export default function Home() {
   const pathname = usePathname();
   // this is really not how i should this but whatevs
 
-  const characterSelected = CHARACTER_DATA.find(({ id }) => {
-    id === pathname;
-  });
-
   const updateCharacter = async (characterId: string) => {
     const character = CHARACTER_DATA.find(({ id }) => id === characterId);
     if (!character) return;
@@ -35,12 +31,7 @@ export default function Home() {
         <h1 className="text-4xl w-2/3 text-center">Clocktower.fyi</h1>
         <div className="p-5"></div>
         <CharacterIconInput onSubmit={updateCharacter} />
-        {characterSelected && (
-          <Info
-            source={`https://raw.githubusercontent.com/bra1n/townsquare/develop/src/assets/icons/${characterSelected.id}.png`}
-            data={characterSelected}
-          />
-        )}
+
         <div className="p-2"></div>
         <Alert className="w-2/3">
           <AlertTitle>Note!</AlertTitle>
