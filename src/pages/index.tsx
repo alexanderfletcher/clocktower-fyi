@@ -29,6 +29,7 @@ export default function Home() {
         className={`flex min-h-screen flex-col justify-start- items-center mt-[10%] ${inter.className}`}
       >
         <h1 className="text-4xl w-2/3 text-center">Clocktower.fyi</h1>
+        <h2>Quick access to interactions (basic jinxes for now)</h2>
         <div className="p-5"></div>
         <CharacterIconInput onSubmit={updateCharacter} />
 
