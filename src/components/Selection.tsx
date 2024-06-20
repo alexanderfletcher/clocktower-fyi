@@ -34,6 +34,7 @@ import {
 } from "./characterData";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { customStringComparator } from "@/lib/stringComparitor";
+import { CommandSeparator } from "cmdk";
 
 const sortedCharacters = CHARACTER_DATA.map((character) => {
   return {
@@ -53,10 +54,10 @@ export function CharacterSelection({
 }: Props) {
   const [open, setOpen] = React.useState(false);
   const [editionOpen, setEditionOpen] = React.useState(false);
-  const [edition, setEdition] = React.useState("");
+  const [selectedEdition, setEdition] = React.useState("");
 
   const characters = sortedCharacters.filter((character) => {
-    return isCharacterInEdition(character, edition);
+    return isCharacterInEdition(character, selectedEdition);
   });
 
   return (
@@ -70,7 +71,7 @@ export function CharacterSelection({
               aria-expanded={open}
               className="w-full justify-between capitalize"
             >
-              {edition || "Select edition..."}
+              {selectedEdition || "Select edition..."}
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
             </Button>
           </PopoverTrigger>
@@ -91,11 +92,30 @@ export function CharacterSelection({
                       <CheckIcon
                         className={cn(
                           "ml-auto h-4 w-4",
-                          value === edition ? "opacity-100" : "opacity-0"
+                          selectedEdition.toLowerCase() ===
+                            edition.toLowerCase()
+                            ? "opacity-100"
+                            : "opacity-0"
                         )}
                       />
                     </CommandItem>
                   ))}
+                  <CommandItem
+                    key={"Any"}
+                    value={"Any"}
+                    onSelect={(currentValue) => {
+                      setEdition(currentValue === value ? "" : currentValue);
+                      setEditionOpen(false);
+                    }}
+                  >
+                    Any
+                    <CheckIcon
+                      className={cn(
+                        "ml-auto h-4 w-4",
+                        "Any" === selectedEdition ? "opacity-100" : "opacity-0"
+                      )}
+                    />
+                  </CommandItem>
                 </CommandGroup>
               </CommandList>
             </Command>
