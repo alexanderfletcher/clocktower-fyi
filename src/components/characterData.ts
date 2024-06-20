@@ -6,6 +6,37 @@ export const characterNameToId = (
   return CHARACTER_DATA.find((char) => char.name === characterName)?.id;
 };
 
+export const editionToName = (edition: string): string => {
+  return edition;
+};
+
+export const EDITION_NAME_MAPPER = {
+  "Trouble Brewing": "tb",
+  "Bad Moon Rising": "bmr",
+  "Sects & Violets": "snv",
+  Experimental: "",
+} as const;
+
+export const isCharacterInEdition = (
+  character: { edition: string },
+  edition: string
+) => {
+  switch (edition.toLowerCase()) {
+    case "trouble brewing":
+      return character.edition === "tb";
+    case "bad moon rising":
+      return character.edition === "bmr";
+    case "sects & violets":
+      return character.edition === "snv";
+    case "experimental":
+      return character.edition === "";
+    default:
+      return true;
+  }
+};
+
+export const EDITION_NAMES = Object.keys(EDITION_NAME_MAPPER);
+
 export const CHARACTER_DATA = [
   {
     id: "washerwoman",
