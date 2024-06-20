@@ -688,12 +688,12 @@ export const JINXES = [
       {
         id: "Minstrel",
         reason:
-          "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is.",
+          "If the Minstrel makes everyone drunk, the Organ Grinder keeps their ability but the Minstrel keeps their eyes open when voting.",
       },
       {
         id: "Preacher",
         reason:
-          "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is.",
+          "If the Preacher removes the Organ Grinder ability, the Organ Grinder keeps their ability but the Preacher keeps their eyes open when voting.",
       },
     ],
   },

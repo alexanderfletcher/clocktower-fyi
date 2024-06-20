@@ -41,7 +41,6 @@ export const getCharacterId = (characterName: string): string => {
   const character = CHARACTER_DATA.find(
     (character) => character.name === characterName
   );
-  console.log({ character, characterName });
 
   if (!character) return "";
   return character.id;
