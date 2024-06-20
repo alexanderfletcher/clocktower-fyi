@@ -37,6 +37,16 @@ export const isCharacterInEdition = (
 
 export const EDITION_NAMES = Object.keys(EDITION_NAME_MAPPER);
 
+export const getCharacterId = (characterName: string): string => {
+  const character = CHARACTER_DATA.find(
+    (character) => character.name === characterName
+  );
+  console.log({ character, characterName });
+
+  if (!character) return "";
+  return character.id;
+};
+
 export const CHARACTER_DATA = [
   {
     id: "washerwoman",

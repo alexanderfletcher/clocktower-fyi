@@ -1,4 +1,8 @@
-import { CharacterData, characterNameToId } from "./characterData";
+import {
+  CharacterData,
+  characterNameToId,
+  getCharacterId,
+} from "./characterData";
 import { JINXES, JinxData } from "./jinx";
 import {
   Card,
@@ -80,9 +84,12 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
                 src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterNameToId(jinxer)}.png`}
               ></AvatarImage>
             </Avatar>
-            <h3 className="flex justify-between self-center text-2xl font-semibold leading-none tracking-tigh">
-              {jinxer}
-            </h3>
+            <Link
+              className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
+              href={`/characters/${getCharacterId(jinxer)}`}
+            >
+              <h3 className="">{jinxer}</h3>
+            </Link>
           </div>
           <Button asChild>
             <Link href="https://wiki.bloodontheclocktower.com/Djinn">
