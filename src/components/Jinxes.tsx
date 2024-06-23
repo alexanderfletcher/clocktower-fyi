@@ -101,7 +101,7 @@ export function Jinxes({ character }: Props) {
         <JinxCard jinxer={jinxer} reason={reason} key={jinxer} />
       ))}
       {characterInteractions.map(interaction => (
-        <InteractionCard {...interaction} />
+        <InteractionCard {...interaction} key={interaction.title} />
       ))}
     </div>
   );
