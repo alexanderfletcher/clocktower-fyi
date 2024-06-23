@@ -154,7 +154,7 @@ function InteractionCard(interestingInteraction: Interaction) {
             </Avatar>}
             <Link
               className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
-              href={title === 'Drunk/Poisoned' ? `https://wiki.bloodontheclocktower.com/States#Drunkenness_and_Poisoning` : `/characters/${getCharacterId(interestingInteraction.title)}`}
+              href={type === 'Character' ? `/characters/${getCharacterId(interestingInteraction.title)}`: `https://wiki.bloodontheclocktower.com/States#Drunkenness_and_Poisoning`}
             >
               <h3 className="">{title}</h3>
             </Link>
