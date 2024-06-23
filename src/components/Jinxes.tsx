@@ -60,13 +60,13 @@ const findInteractionsForCharacter = (
 ): ((data: InterestingInteractionData) => Interaction[]) => {
   return (data: InterestingInteractionData): Interaction[] => {
     return data.interactions
-      .filter(interaction => interaction.type === 'Character' && interaction.character === characterName)
+      .filter(interaction => interaction.type === 'Character' && interaction.title === characterName)
       .map(interaction => {
         if(interaction.type !== 'Character') throw new Error("Cant find interaction");
         return {
           type: 'Character',
           interaction: interaction.interaction,
-          character: data.id,
+          title: data.id,
           source: interaction.source
         }
       })
@@ -87,7 +87,7 @@ export function Jinxes({ character }: Props) {
   }).flatMap(interaction => interaction.interactions);
 
   const otherCharacterInteractions = INTERESTING_INTERACTIONS.filter((interaction) => {
-    return interaction.interactions.find((info) => info.type === 'Character' && info.character === character.name) !== undefined;
+    return interaction.interactions.find((info) => info.type === 'Character' && info.title === character.name) !== undefined;
   }).flatMap(findInteractionsForCharacter(character.name))
   console.log({ otherCharacterInteractions })
 
@@ -141,7 +141,7 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
 }
 
 function InteractionCard(interestingInteraction: Interaction) {
-  const { interaction, source, type } = interestingInteraction
+  const { interaction, source, type, title } = interestingInteraction
   return (
     <Card className="m-5">
       <CardHeader>
@@ -149,14 +149,14 @@ function InteractionCard(interestingInteraction: Interaction) {
           <div className="flex">
             {type === 'Character' && <Avatar className="self-center">
               <AvatarImage
-                src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterNameToId(interestingInteraction.character)}.png`}
+                src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterNameToId(interestingInteraction.title)}.png`}
               ></AvatarImage>
             </Avatar>}
             <Link
               className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
-              href={type === 'Drunk/Poisoned' ? `https://wiki.bloodontheclocktower.com/States#Drunkenness_and_Poisoning` : `/characters/${getCharacterId(interestingInteraction.character)}`}
+              href={title === 'Drunk/Poisoned' ? `https://wiki.bloodontheclocktower.com/States#Drunkenness_and_Poisoning` : `/characters/${getCharacterId(interestingInteraction.title)}`}
             >
-              <h3 className="">{type === 'Character' ? interestingInteraction.character : type}</h3>
+              <h3 className="">{title}</h3>
             </Link>
           </div>
           <Button asChild>
