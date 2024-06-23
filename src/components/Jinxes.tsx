@@ -96,7 +96,7 @@ export function Jinxes({ character }: Props) {
 
 
   return (
-    <div className="w-3/4">
+    <div className="w-[90%] sm:w-3/4">
       {characterJinxes.map(({ jinxer, reason }) => (
         <JinxCard jinxer={jinxer} reason={reason} key={jinxer} />
       ))}

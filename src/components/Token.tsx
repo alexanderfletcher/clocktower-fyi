@@ -8,7 +8,7 @@ type TokenProps = {
 
 export function Info({ data, source }: TokenProps) {
   return (
-    <div className="border-solid w-2/3 bg-contain text-center">
+    <div className="border-solid w-[90%] sm:w-3/4 bg-contain text-center">
       <div className="flex items-center justify-center">
         <img height={150} width={180} src={source}></img>
       </div>
