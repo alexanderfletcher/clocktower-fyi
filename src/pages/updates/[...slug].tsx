@@ -49,14 +49,14 @@ export default function PostPage({ slug }: PostPageProps) {
         <meta property="og:title" content={post.title} />
         <meta
           property="og:image"
-          content={`https://clocktower.fyi/${post.image}`}
+          content={`https://clocktower.fyi${post.image}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
         <meta
           name="twitter:image"
-          content={`https://clocktower.fyi/${post.image}`}
+          content={`https://clocktower.fyi${post.image}`}
         />
         <link rel="canonical" href={`https://clocktower.fyi/${slug}`} />
       </Head>
