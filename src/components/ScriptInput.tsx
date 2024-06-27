@@ -13,7 +13,7 @@ export function CharacterIconInput({ onSubmit }: Props) {
   const [characterSelected, setCharacterSelected] = useState("");
   useEffect(() => {
     onSubmit(characterSelected);
-  }, [characterSelected]);
+  }, [characterSelected, onSubmit]);
   return (
     <div className="w-2/3">
       <CharacterSelection
