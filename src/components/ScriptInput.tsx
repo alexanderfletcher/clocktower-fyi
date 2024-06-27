@@ -15,7 +15,7 @@ export function CharacterIconInput({ onSubmit }: Props) {
     onSubmit(characterSelected);
   }, [characterSelected, onSubmit]);
   return (
-    <div className="w-2/3">
+    <div className="w-[90%] sm:w-3/4">
       <CharacterSelection
         characterSelected={characterSelected}
         setCharacterSelected={setCharacterSelected}

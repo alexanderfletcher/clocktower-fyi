@@ -1,16 +1,9 @@
 import { Inter } from "next/font/google";
 import { CharacterIconInput } from "@/components/ScriptInput";
-import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Info } from "@/components/Token";
-import { CHARACTER_DATA, CharacterData } from "@/components/characterData";
+import { CHARACTER_DATA } from "@/components/characterData";
 import { useRouter } from "next/router";
-import {
-  notFound,
-  useParams,
-  usePathname,
-  useSearchParams,
-} from "next/navigation";
 import { Jinxes } from "@/components/Jinxes";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,7 +31,7 @@ export default function Home() {
       <main
         className={`flex min-h-screen flex-col justify-start- items-center mt-[10%] ${inter.className}`}
       >
-        <h1 className="text-4xl w-2/3 text-center">Clocktower.fyi</h1>
+        <h1 className="text-4xl w-[90%] sm:w-3/4 text-center">Clocktower.fyi</h1>
         <h2>Quick access to interactions (basic jinxes for now)</h2>
         <div className="p-5"></div>
         <CharacterIconInput onSubmit={updateCharacter} />
