@@ -5,7 +5,7 @@ import Script from "next/script";
 const NewHarpyAbility = (
   <div>
     <p className="leading-7 [&:not(:first-child)]:mt-6">
-      The ability of the Harpy has been updated. You can check the details
+      The ability of the Harpy has been updated. You can check the details{" "}
       <Link href="https://twitter.com/Steve_Medway/status/1805543717576884557">
         here
       </Link>
@@ -19,8 +19,8 @@ const NewHarpyAbility = (
       </strong>
     </p>
     <p className="leading-7 [&:not(:first-child)]:mt-6">
-      This change has not been implemented officially yet, so consider it an
-      upcoming change.
+      Consider this an upcoming change until it is changed in the app or
+      communicated in the discord.
     </p>
     <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
       <p lang="zxx" dir="ltr">
