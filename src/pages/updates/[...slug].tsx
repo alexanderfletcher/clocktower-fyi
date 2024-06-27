@@ -1,6 +1,8 @@
-import { notFound, useParams } from "next/navigation";
+export const runtime = "experimental-edge";
 
-import { GetStaticPaths, GetStaticPropsContext, Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
