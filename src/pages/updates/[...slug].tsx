@@ -9,56 +9,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { Post, allPosts } from "@/posts/post";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 interface PostPageProps {
   slug: string;
 }
-
-// export async function generateMetadata({
-//   params,
-// }: PostPageProps): Promise<Metadata> {
-//   console.log({ params }, "test");
-//   const post = await getPostFromParams(params);
-
-//   if (!post) {
-//     return {};
-//   }
-
-//   const url = process.env.NEXT_PUBLIC_APP_URL;
-
-//   const ogUrl = new URL(`${url}/api/og`);
-//   ogUrl.searchParams.set("heading", post.title);
-//   ogUrl.searchParams.set("type", "Blog Post");
-//   ogUrl.searchParams.set("mode", "dark");
-
-//   return {
-//     title: post.title,
-//     description: post.description,
-//     authors: [{ name: "alex", url: "https://clocktower.fyi" }],
-//     openGraph: {
-//       title: post.title,
-//       description: post.description,
-//       type: "article",
-//       url: absoluteUrl(post.slug),
-//       images: [
-//         {
-//           url: ogUrl.toString(),
-//           width: 1200,
-//           height: 630,
-//           alt: post.title,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       card: "summary_large_image",
-//       title: post.title,
-//       description: post.description,
-//       images: [ogUrl.toString()],
-//     },
-//   };
-// }
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   if (!params || !params.slug) return { props: { slug: "" } };
@@ -79,6 +36,22 @@ export default function PostPage({ slug }: PostPageProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
+      <Head>
+        <title>{post.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta name="description" content={post.description} />
+        <meta property="og:url" content={`https://clocktower.fyi/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Clocktower.fyi" />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:image" content={post.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.description} />
+        <meta name="twitter:image" content={post.image} />
+        <link rel="canonical" href={`https://clocktower.fyi/${slug}`} />
+      </Head>
       <Link
         href="/updates"
         className={cn(
