@@ -27,17 +27,17 @@ const component = (
         June 25, 2024
       </a>
     </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js"></script>
+    <Script async src="https://platform.twitter.com/widgets.js" />
   </div>
 );
 
 export const newPlagueDoctorAbility: Post = {
-  _id: 1,
+  _id: 2,
   date: "2024-06-25",
   description: "A new ability for the harpy has been revealed",
   image: "/icons/plaguedoctor.png",
   published: true,
   slug: "new-plague-doctor-ability-25-06-24",
-  title: "Upcoming Change to the Plague Doctor",
+  title: "Plague Doctor Ability Update",
   component,
 };

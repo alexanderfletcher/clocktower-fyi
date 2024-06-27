@@ -42,6 +42,6 @@ export const newHarpyAbility: Post = {
   image: "/icons/harpy.png",
   published: true,
   slug: "new-harpy-ability-25-06-24",
-  title: "Upcoming Change to the Harpy",
+  title: "Harpy Ability Update",
   component: NewHarpyAbility,
 };

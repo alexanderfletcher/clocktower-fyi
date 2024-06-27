@@ -24,8 +24,13 @@ export default function BlogPage() {
             Clocktower Updates
           </h1>
           <p className="text-xl text-muted-foreground">
-            A collection of updates on the social deduction game Blood on the
-            Clocktower
+            An unofficial collection of updates on the social deduction game{" "}
+            <Link
+              className="hover:underline"
+              href="https://bloodontheclocktower.com"
+            >
+              Blood on the Clocktower
+            </Link>
           </p>
         </div>
       </div>
@@ -67,6 +72,14 @@ export default function BlogPage() {
       ) : (
         <p>No posts published.</p>
       )}
+      <br></br>
+      <footer>
+        <p className="text-sm text-muted-foreground text-center">
+          This project is not affiliated with The Pandemonium Institute. All
+          roles, content are the property of Steven Medway and The Pandemonium
+          Institute.
+        </p>
+      </footer>
     </div>
   );
 }

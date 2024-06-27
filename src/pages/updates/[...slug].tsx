@@ -37,74 +37,83 @@ export default function PostPage({ slug }: PostPageProps) {
   }
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10">
-      <Head>
-        <title>{post.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta name="description" content={post.description} />
-        <meta property="og:url" content={`https://clocktower.fyi/${slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Clocktower.fyi" />
-        <meta property="og:description" content={post.description} />
-        <meta property="og:title" content={post.title} />
-        <meta
-          property="og:image"
-          content={`https://clocktower.fyi${post.image}`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.description} />
-        <meta
-          name="twitter:image"
-          content={`https://clocktower.fyi${post.image}`}
-        />
-        <link rel="canonical" href={`https://clocktower.fyi/${slug}`} />
-      </Head>
-      <Link
-        href="/updates"
-        className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
-        )}
-      >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        See all posts
-      </Link>
-      <div>
-        {post.date && (
-          <time
-            dateTime={post.date}
-            className="block text-sm text-muted-foreground"
-          >
-            Published on {formatDate(post.date)}
-          </time>
-        )}
-        <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
-          {post.title}
-        </h1>
-      </div>
-      {post.image && (
-        <div className="relative h-[200px]">
-          <Image
-            src={post.image}
-            alt={post.title}
-            fill
-            className="my-8 rounded-md object-contain border bg-muted transition-colors"
-            priority
+    <>
+      <article className="container relative max-w-3xl py-6 lg:py-10">
+        <Head>
+          <title>{post.title}</title>
+          <meta name="robots" content="follow, index" />
+          <meta name="description" content={post.description} />
+          <meta property="og:url" content={`https://clocktower.fyi/${slug}`} />
+          <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="Clocktower.fyi" />
+          <meta property="og:description" content={post.description} />
+          <meta property="og:title" content={post.title} />
+          <meta
+            property="og:image"
+            content={`https://clocktower.fyi${post.image}`}
           />
-        </div>
-      )}
-      <hr className="mt-12" />
-      {post.component}
-      <div className="flex justify-center py-6 lg:py-10">
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={post.description} />
+          <meta
+            name="twitter:image"
+            content={`https://clocktower.fyi${post.image}`}
+          />
+          <link rel="canonical" href={`https://clocktower.fyi/${slug}`} />
+        </Head>
         <Link
           href="/updates"
-          className={cn(buttonVariants({ variant: "ghost" }))}
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "absolute left-[-200px] top-14 hidden xl:inline-flex"
+          )}
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
           See all posts
         </Link>
-      </div>
-    </article>
+        <div>
+          {post.date && (
+            <time
+              dateTime={post.date}
+              className="block text-sm text-muted-foreground"
+            >
+              Published on {formatDate(post.date)}
+            </time>
+          )}
+          <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
+            {post.title}
+          </h1>
+        </div>
+        {post.image && (
+          <div className="relative h-[200px]">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="my-8 rounded-md object-contain border bg-muted transition-colors"
+              priority
+            />
+          </div>
+        )}
+        <hr className="mt-12" />
+        {post.component}
+        <div className="flex justify-center py-6 lg:py-10">
+          <Link
+            href="/updates"
+            className={cn(buttonVariants({ variant: "ghost" }))}
+          >
+            <Icons.chevronLeft className="mr-2 h-4 w-4" />
+            See all posts
+          </Link>
+        </div>
+      </article>
+      <footer>
+        <p className="text-sm text-muted-foreground text-center">
+          This project is not affiliated with The Pandemonium Institute. All
+          roles, content are the property of Steven Medway and The Pandemonium
+          Institute.
+        </p>
+      </footer>
+    </>
   );
 }

@@ -1,5 +1,8 @@
+import { jugglerRuleClarification } from "./juggler-rules-clarification";
+import { newBallonistAbility } from "./new-balloonist-ability";
 import { newHarpyAbility } from "./new-harpy-ability";
 import { newPlagueDoctorAbility } from "./new-plague-doctor-ability";
+import { summonerPreacherJinx } from "./summoner-preacher-jinx";
 
 export type Post = {
   published: boolean;
@@ -11,4 +14,10 @@ export type Post = {
   slug: string;
   component: JSX.Element;
 };
-export const allPosts: Post[] = [newHarpyAbility, newPlagueDoctorAbility];
+export const allPosts: Post[] = [
+  newHarpyAbility,
+  newPlagueDoctorAbility,
+  summonerPreacherJinx,
+  newBallonistAbility,
+  jugglerRuleClarification,
+];
