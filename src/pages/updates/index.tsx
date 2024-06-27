@@ -77,7 +77,13 @@ export default function BlogPage() {
         <p className="text-sm text-muted-foreground text-center">
           This project is not affiliated with The Pandemonium Institute. All
           roles, content are the property of Steven Medway and The Pandemonium
-          Institute.
+          Institute. Images of tokens are taken from{" "}
+          <Link
+            className="hover:underline"
+            href="https://github.com/nicholas-eden/townsquare"
+          >
+            the free online tool source
+          </Link>
         </p>
       </footer>
     </div>

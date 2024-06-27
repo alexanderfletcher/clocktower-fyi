@@ -29,7 +29,7 @@ export const jugglerRuleClarification: Post = {
     "When making a Juggler guess, the Juggler may not guess the same player and character more than once.",
   image: "/icons/juggler.png",
   published: true,
-  slug: "Juggler rules clarification-21-06-24",
+  slug: "Juggler-rules-clarification-21-06-24",
   title: "Juggler rules clarification",
   component,
 };
