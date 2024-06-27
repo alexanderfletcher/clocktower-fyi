@@ -1,4 +1,5 @@
 import { newHarpyAbility } from "./new-harpy-ability";
+import { newPlagueDoctorAbility } from "./new-plague-doctor-ability";
 
 export type Post = {
   published: boolean;
@@ -10,4 +11,4 @@ export type Post = {
   slug: string;
   component: JSX.Element;
 };
-export const allPosts: Post[] = [newHarpyAbility];
+export const allPosts: Post[] = [newHarpyAbility, newPlagueDoctorAbility];

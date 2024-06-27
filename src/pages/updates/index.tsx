@@ -38,14 +38,16 @@ export default function BlogPage() {
               className="group relative flex flex-col space-y-2"
             >
               {post.image && (
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={804}
-                  height={452}
-                  className="rounded-md border bg-muted transition-colors"
-                  priority={index <= 1}
-                />
+                <div className="relative h-[250px]">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    // sizes="100vw"
+                    className="rounded-md object-contain border obj bg-muted transition-colors"
+                    priority={index <= 1}
+                  />
+                </div>
               )}
               <h2 className="text-2xl font-extrabold">{post.title}</h2>
               {post.description && (

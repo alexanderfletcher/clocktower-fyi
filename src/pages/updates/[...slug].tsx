@@ -84,14 +84,15 @@ export default function PostPage({ slug }: PostPageProps) {
         </h1>
       </div>
       {post.image && (
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={720}
-          height={405}
-          className="my-8 rounded-md border bg-muted transition-colors"
-          priority
-        />
+        <div className="relative h-[200px]">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="my-8 rounded-md object-contain border bg-muted transition-colors"
+            priority
+          />
+        </div>
       )}
       <hr className="mt-12" />
       {post.component}

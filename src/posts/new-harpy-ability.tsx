@@ -5,10 +5,11 @@ import Script from "next/script";
 const NewHarpyAbility = (
   <div>
     <p className="leading-7 [&:not(:first-child)]:mt-6">
-      The ability of the harpy has been updated.
+      The ability of the Harpy has been updated. You can check the details
       <Link href="https://twitter.com/Steve_Medway/status/1805543717576884557">
         here
       </Link>
+      .
     </p>
     <br></br>
     <p>
@@ -18,7 +19,7 @@ const NewHarpyAbility = (
       </strong>
     </p>
     <p className="leading-7 [&:not(:first-child)]:mt-6">
-      This change has not been implemented officially yet so consider it an
+      This change has not been implemented officially yet, so consider it an
       upcoming change.
     </p>
     <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
@@ -29,15 +30,15 @@ const NewHarpyAbility = (
       <a href="https://twitter.com/Steve_Medway/status/1805543717576884557?ref_src=twsrc%5Etfw">
         June 25, 2024
       </a>
-      <Script async src="https://platform.twitter.com/widgets.js" />
     </blockquote>
+    <Script async src="https://platform.twitter.com/widgets.js" />
   </div>
 );
 
 export const newHarpyAbility: Post = {
   _id: 1,
   date: "2024-06-25",
-  description: "A new ability for the harpy has been revealed",
+  description: "A new ability for the Harpy has been revealed",
   image: "/icons/harpy.png",
   published: true,
   slug: "new-harpy-ability-25-06-24",
