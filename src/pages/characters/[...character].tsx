@@ -44,7 +44,7 @@ export default function Home({ character }: CharacterPageProps) {
   return (
     <>
       <Head>
-        <title>{character.name}</title>
+        <title>Clocktower.fyi - {character.name}</title>
         <meta name="robots" content="follow, index" />
         <meta
           name="description"
