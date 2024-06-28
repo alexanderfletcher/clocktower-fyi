@@ -10,6 +10,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Clocktower.fyi</title>
+        <meta name="robots" content="follow, index" />
+        <meta
+          name="description"
+          content={`Unofficial site for jinxes, interactions and updates about the popular social deduction game, Blood on the Clocktower`}
+        />
       </Head>
       <ThemeProvider forcedTheme="dark">
         <main className={inter.className}>
