@@ -1,12 +1,27 @@
-import { Inter } from "next/font/google";
+export const runtime = "experimental-edge";
+
 import { CharacterIconInput } from "@/components/ScriptInput";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Info } from "@/components/Token";
-import { CHARACTER_DATA } from "@/components/characterData";
+import { CHARACTER_DATA, CharacterData } from "@/components/characterData";
 import { useRouter } from "next/router";
 import { Jinxes } from "@/components/Jinxes";
+import Head from "next/head";
+import { GetStaticPaths, GetStaticPropsContext } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  if (!params || !params.character) return { props: { chracter: undefined } };
+
+  const character = findCharacter(params.character);
+
+  return { props: { character } };
+}
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
+  return {
+    paths: [], //indicates that no page needs be created at build time
+    fallback: "blocking", //indicates the type of fallback
+  };
+};
 
 const findCharacter = (character: string | string[] | undefined) => {
   if (!Array.isArray(character)) return;
@@ -14,10 +29,12 @@ const findCharacter = (character: string | string[] | undefined) => {
   return CHARACTER_DATA.find(({ id }) => id === character[0]);
 };
 
-export default function Home() {
-  const router = useRouter();
+type CharacterPageProps = {
+  character: CharacterData;
+};
 
-  const characterSelected = findCharacter(router.query.character);
+export default function Home({ character }: CharacterPageProps) {
+  const router = useRouter();
 
   const updateCharacter = async (characterId: string) => {
     const character = CHARACTER_DATA.find(({ id }) => id === characterId);
@@ -26,22 +43,60 @@ export default function Home() {
   };
   return (
     <>
+      <Head>
+        <title>{character.name}</title>
+        <meta name="robots" content="follow, index" />
+        <meta
+          name="description"
+          content={`Jinxes and interesting interactions for the ${character.name}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://clocktower.fyi/characters/${character.id}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Clocktower.fyi" />
+        <meta
+          property="og:description"
+          content={`Jinxes and interesting interactions for the ${character.name}`}
+        />
+        <meta property="og:title" content={character.name} />
+        <meta
+          property="og:image"
+          content={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={character.name} />
+        <meta
+          name="twitter:description"
+          content={`Jinxes and interesting interactions for the ${character.name}`}
+        />
+        <meta
+          name="twitter:image"
+          content={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+        />
+        <link
+          rel="canonical"
+          href={`https://clocktower.fyi/characters/${character.id}`}
+        />
+      </Head>
       <div className={"absolute p-10 right-0"}>{/* <DarkModeSwitch /> */}</div>
-
       <main
-        className={`flex min-h-screen flex-col justify-start- items-center mt-[10%] ${inter.className}`}
+        className={`flex min-h-screen flex-col justify-start- items-center mt-[10%]`}
       >
-        <h1 className="text-4xl w-[90%] sm:w-3/4 text-center">Clocktower.fyi</h1>
+        <h1 className="text-4xl w-[90%] sm:w-3/4 text-center">
+          Clocktower.fyi
+        </h1>
         <h2>Quick access to interactions (basic jinxes for now)</h2>
         <div className="p-5"></div>
         <CharacterIconInput onSubmit={updateCharacter} />
-        {characterSelected && (
+        {character && (
           <>
             <Info
-              source={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterSelected.id}.png`}
-              data={characterSelected}
+              source={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+              data={character}
             />
-            <Jinxes character={characterSelected} />
+            <Jinxes character={character} />
           </>
         )}
         <div className="p-2"></div>

@@ -1,3 +1,4 @@
+import { alsaahir } from "./alsaahir-reveal";
 import { jugglerRuleClarification } from "./juggler-rules-clarification";
 import { newBallonistAbility } from "./new-balloonist-ability";
 import { newHarpyAbility } from "./new-harpy-ability";
@@ -20,4 +21,5 @@ export const allPosts: Post[] = [
   summonerPreacherJinx,
   newBallonistAbility,
   jugglerRuleClarification,
+  alsaahir,
 ];

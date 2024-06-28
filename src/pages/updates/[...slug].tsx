@@ -6,10 +6,10 @@ import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { absoluteUrl, cn, formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
-import { Post, allPosts } from "@/posts/post";
+import { allPosts } from "@/posts/post";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 

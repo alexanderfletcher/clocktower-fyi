@@ -170,7 +170,8 @@ export const JINXES = [
       },
       {
         id: "Magician",
-        reason: "Only 1 jinxed character can be in play.",
+        reason:
+          "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta.",
       },
       {
         id: "Scarlet Woman",
@@ -210,11 +211,17 @@ export const JINXES = [
       {
         id: "Engineer",
         reason:
-          "Legion and the Engineer can not both be in play at the start of the game.\nIf the Engineer creates Legion, most players (including all evil players) become evil Legion.",
+          "Legion and the Engineer can not both be in play at the start of the game. If the Engineer creates Legion, most players (including all evil players) become evil Legion.",
       },
       {
         id: "Preacher",
-        reason: "Only 1 jinxed character can be in play.",
+        reason:
+          "If the Preacher chooses Legion, Legion keeps their ability, but the Preacher might learn they are Legion.",
+      },
+      {
+        id: "Minstrel",
+        reason:
+          "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion.",
       },
       {
         id: "Hatter",
@@ -413,6 +420,11 @@ export const JINXES = [
         reason:
           "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary.",
       },
+      {
+        id: "Preacher",
+        reason:
+          "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player.",
+      },
     ],
   },
   {
@@ -515,6 +527,11 @@ export const JINXES = [
         reason:
           "The Kazali can not choose the King to become a Minion if a Choirboy is in play.",
       },
+      {
+        id: "Soldier",
+        reason:
+          "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become.",
+      },
     ],
   },
   {
@@ -523,7 +540,7 @@ export const JINXES = [
       {
         id: "Engineer",
         reason:
-          "Riot and the Engineer can not both be in play at the start of the game. \nIf the Engineer creates Riot, the evil players become Riot.",
+          "Riot and the Engineer can not both be in play at the start of the game. If the Engineer creates Riot, the evil players become Riot.",
       },
       {
         id: "Golem",
@@ -546,7 +563,7 @@ export const JINXES = [
       {
         id: "Pit-Hag",
         reason:
-          "If the Pit-Hag creates Riot, all evil players become Riot. \nIf the Pit-Hag creates Riot after day 3, the game continues for one more day.",
+          "If the Pit-Hag creates Riot, all evil players become Riot. If the Pit-Hag creates Riot after day 3, the game continues for one more day.",
       },
       {
         id: "Mayor",
@@ -665,11 +682,6 @@ export const JINXES = [
         reason:
           "If there are two living Al-Hadikhias, the Scarlet Woman Al-Hadikhia becomes the Scarlet Woman again.",
       },
-      {
-        id: "Mastermind",
-        reason:
-          "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is.",
-      },
     ],
   },
   {
@@ -679,11 +691,6 @@ export const JINXES = [
         id: "Butler",
         reason:
           "If the Organ Grinder is causing eyes closed voting, the Butler may raise their hand to vote but their vote is only counted if their master voted too.",
-      },
-      {
-        id: "Flowergirl",
-        reason:
-          "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today. (instead of their normal ability)",
       },
       {
         id: "Minstrel",
@@ -734,6 +741,11 @@ export const JINXES = [
         id: "Politician",
         reason: "The Politician might register as evil to the Vizier.",
       },
+      {
+        id: "Alsaahir",
+        reason:
+          "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play.",
+      },
     ],
   },
   {
@@ -763,6 +775,16 @@ export const JINXES = [
         id: "Bounty Hunter",
         reason:
           "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil.",
+      },
+    ],
+  },
+  {
+    id: "Mastermind",
+    jinx: [
+      {
+        id: "Al-Hadikhia",
+        reason:
+          "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins.",
       },
     ],
   },
