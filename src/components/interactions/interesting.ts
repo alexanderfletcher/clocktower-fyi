@@ -610,4 +610,65 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Steward",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoined",
+        interaction: `If the Steward is drunk or poisoned, their information might be false.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Atheist",
+        interaction: `The Storyteller is not a player and thus cannot be shown to the Steward, even if the Atheist is on the script. If the Atheist is in play, however, the Storyteller can be shown, because the Storyteller may break game rules.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Cult Leader",
+        interaction: `The Cult Leader is always a valid target for the Steward as they don't change alignment until later in the first night.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Evil Twin",
+        interaction: `The Steward can learn the good twin, but this might not be fun depending on the players and other info involved.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Marionette",
+        interaction: `Despite having drawn a blue token, the Marionette is not a valid player for the Steward to learn.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction: `The Recluse may or may not be able to be shown to the Steward - it's the Storyteller's choice of how they register the Recluse.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Spy",
+        interaction: `The Spy may or may not be able to be shown to the Steward - it's the Storyteller's choice of how they register the Spy.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+      {
+        type: "Character",
+        title: "Vortox",
+        interaction: `The Steward learns an evil player in a Vortox game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108891357029863494",
+      },
+    ],
+  },
 ];
