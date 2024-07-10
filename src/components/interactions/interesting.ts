@@ -481,4 +481,114 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Plague Doctor",
+    interactions: [
+      {
+        type: "General",
+        title: "Poisoined/Drunk/Death",
+        interaction: `If a Minion gains an ability through a jinx and is then poisoned or dies, they do not maintain the ability second ability any more than their own. If they are changed into another character, they do maintain the ability as they gained it at the moment of the Plague Doctor death.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Alchemist",
+        interaction: `The Alchemist ability counts as being in play when the Storyteller is choosing which ability to gain.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Balloonist",
+        interaction: `The Storyteller is not a Minion even if they have a Minion ability and therefore cannot be seen by the Balloonist.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Barista",
+        interaction: `The Storyteller is not a player and cannot be affected by the Barista.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Bounty Hunter",
+        interaction: `The Storyteller is not evil even if they have a Minion ability and therefore cannot be seen by the Bounty Hunter.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Damsel",
+        interaction: `The Storyteller is not a Minion, so cannot guess the Damsel.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Engineer",
+        interaction: `The Engineer does not affect the Storyteller as they are not themselves a Minion.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Goon",
+        interaction: `The Storyteller isn't a player and doesn't have an alignment, so they cannot affect the Goon's alignment or be made drunk by the Goon.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "Imp",
+        interaction: `The Storyteller might gain a Minion ability, but they will not be a Minion, so they cannot become an Imp through the Imp ability.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428733021827142",
+      },
+      {
+        type: "Character",
+        title: "King",
+        interaction: `The King cannot learn the character whose ability the Storyteller has.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+      {
+        type: "Character",
+        title: "Legion",
+        interaction: `A Plague Doctor death can result in a Minion ability in a Legion game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+      {
+        type: "Character",
+        title: "Minstrel",
+        interaction: ` The Storyteller is not drunked by the Minstrel, so a Plague-Doctor-granted Minion ability would still be functioning on a Minstrel night.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+      {
+        type: "Character",
+        title: "Preacher",
+        interaction: `The Preacher cannot select the Storyteller and therefore cannot remove their Minion ability.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction: `The Recluse might affect the ability the Storyteller gains by registering as a Minion being in play.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+      {
+        type: "Character",
+        title: "Riot",
+        interaction: `A Plague Doctor death can result in a Minion ability in a Riot game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1144428738566697051",
+      },
+    ],
+  },
 ];
