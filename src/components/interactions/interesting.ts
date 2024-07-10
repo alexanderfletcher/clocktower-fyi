@@ -433,4 +433,52 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Ojo",
+    interactions: [
+      {
+        type: "Character",
+        title: "Goon",
+        interaction: ` If the Ojo chooses Goon and is the first player to do so tonight, they are made drunk and change the Goon's alignment.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+      {
+        type: "Character",
+        title: "Lunatic",
+        interaction: `The Demon learns the player a Lunatic-Ojo functionally targeted, not the character they chose.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+      {
+        type: "Character",
+        title: "Mathematician",
+        interaction: `The Ojo killing a different character to the one they chose is not a malfunction, it's part of the Ojo's own ability.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+      {
+        type: "Character",
+        title: "Mayor",
+        interaction: `If the Ojo chooses Mayor, it's still possible to bounce it to another player.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction: `If the Ojo chooses Recluse, the Recluse might register as something else and cause a Storyteller-choice death.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+      {
+        type: "Character",
+        title: "Spy",
+        interaction:
+          "The Spy might register as a good character the Ojo chose and die instead… You should think very carefully about whether this is a good idea.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1164705974796419183",
+      },
+    ],
+  },
 ];
