@@ -591,4 +591,23 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "High Priestess",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoined",
+        interaction: `You can choose to give the High Priestess anyone you like.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1121575296425021522",
+      },
+      {
+        type: "Character",
+        title: "Vortox",
+        interaction: `The only restriction is not to give the one player you would have given if it was not a Vortox game. It does not have to be the least helpful player to talk to.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1121575296425021522",
+      },
+    ],
+  },
 ];
