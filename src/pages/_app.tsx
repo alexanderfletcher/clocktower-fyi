@@ -15,6 +15,8 @@ export default function App({ Component, pageProps }: AppProps) {
           name="description"
           content={`Unofficial site for jinxes, interactions and updates about the popular social deduction game, Blood on the Clocktower`}
         />
+        <link rel="icon" type="image/svg+xml" href="//favicon.svg"/>
+        <link rel="icon" type="image/png" href="/favicon.png"/>
       </Head>
       <ThemeProvider forcedTheme="dark">
         <main className={inter.className}>
