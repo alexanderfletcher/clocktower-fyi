@@ -671,4 +671,44 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Knight",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoined",
+        interaction: `If the Knight is drunk or poisoned, their information might be false.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108890558291787776",
+      },
+      {
+        type: "Character",
+        title: "Atheist",
+        interaction: `The Storyteller is not a player and thus cannot be shown to the Knight, even if the Atheist is on the script. If the Atheist is in play, however, the Storyteller can be shown, because the Storyteller may break game rules.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108890558291787776",
+      },
+      {
+        type: "Character",
+        title: "Legion",
+        interaction: `A Knight cannot see any Legion player in their info, regardless of if they're registering as a Minion.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108890558291787776",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction: `The Recluse may or may not be able to be shown to the Knight - it's the Storyteller's choice of how they register the Recluse.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108890558291787776",
+      },
+      {
+        type: "Character",
+        title: "Vortox",
+        interaction: `A Knight in a Vortox game learns 2 players, one of which is the Demon - very powerful stuff! If you can confirm it's a Vortox game…`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1108890558291787776",
+      },
+    ],
+  },
 ];
