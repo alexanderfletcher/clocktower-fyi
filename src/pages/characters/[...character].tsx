@@ -12,7 +12,7 @@ import { GetStaticPaths, GetStaticPropsContext } from "next";
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   if (!params || !params.character) return { props: { chracter: undefined } };
 
-  const character = findCharacter(params.character);
+  const character = findCharacter(params.character) || null;
 
   return { props: { character } };
 }
@@ -36,15 +36,18 @@ type CharacterPageProps = {
 export default function Home({ character }: CharacterPageProps) {
   const router = useRouter();
 
+  if (!character) return;
+
   const updateCharacter = async (characterId: string) => {
     const character = CHARACTER_DATA.find(({ id }) => id === characterId);
     if (!character) return;
     router.push(`/characters/${character?.id}`);
   };
+  const title = `Clocktower.fyi - ${character.name}`;
   return (
     <>
       <Head>
-        <title>Clocktower.fyi - {character.name}</title>
+        <title>{title}</title>
         <meta name="robots" content="follow, index" />
         <meta
           name="description"

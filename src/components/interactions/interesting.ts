@@ -252,4 +252,185 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Hatter",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoned",
+        interaction:
+          "If the Hatter is drunk or poisoned when they die, nothing happens. If a Minion or Demon is drunk or poisoned when they change character, this still works as it's due to the Hatter ability, not their own, though they'd still be drunk or poisoned with whatever new character they change to.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Alchemist",
+        interaction:
+          "If the Minion whose ability the Alchemist has comes into play, the Alchemist gains a new ability instead.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Apprentice",
+        interaction:
+          "An Apprentice with a Minion ability is not a Minion and is not affected by the Hatter ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Bounty Hunter",
+        interaction:
+          "The Bounty Hunter evil Townsfolk is not a Minion or Demon, so does not choose a new character.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Chambermaid",
+        interaction:
+          "A player waking to make only a Hatter choice and nothing else does not count as waking to the Chambermaid - it's not their own ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Cult Leader",
+        interaction:
+          "An evil Cult Leader is not a Minion or Demon, so does not choose a new character.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939180504174613",
+        title: "Damsel",
+        interaction:
+          "Even if the Minions have changed characters, a used guess is still used.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939243171258368",
+        title: "Evil Twin",
+        interaction:
+          "If an Evil Twin ability comes into play through the Hatter, you should wake each twin individually to show them who their twin is and what character it is. Remember that the good twin doesn't have to be alive and generally shouldn't be if this happens in late game as this can mean the good team cannot win.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939243171258368",
+        title: "Fearmonger",
+        interaction:
+          "If a player becomes a Fearmonger, their choices as their previous character aren’t relevant to the Fearmonger announcement, their first pick will cause an announcement regardless of who it is.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939243171258368",
+        title: "Godfather",
+        interaction:
+          "If a Godfather comes into play, they'd immediately learn the in-play Outsiders, whether those Outsiders are dead or alive.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Lil' Monsta",
+        interaction:
+          "A Lil’ Monsta holder would be able to choose another Demon, as usual for Demons. Jinx - If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "LLeech",
+        interaction:
+          "A Lleech coming into play would immediately select a host, then follow that by choosing a kill.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Lunatic",
+        interaction:
+          "A Lunatic can be given the choice to change characters as if they were the real Demon and a Hatter had died, regardless of whether the actual Hatter died or not.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Marionette",
+        interaction:
+          "If a player chooses Marionette with the Hatter ability, you should tell them they're a good character and tell the Demon they are the Marionette. There may also be a future jinx for the Marionette.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Plague Doctor",
+        interaction:
+          "If the in-play Minion abilities change due to the Hatter, this does not affect a Plague Doctor granted Storyteller ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Po",
+        interaction:
+          "A Po that comes into play would have the choice to kill no-one or 1 player - choices as a previous character are not relevant for the Po ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Preacher",
+        interaction:
+          "A Minion chosen by the Preacher that changes character is still affected by the Preacher ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939466455023646",
+        title: "Pukka",
+        interaction:
+          "If the Demon changes away from being a Pukka, the previously poisoned player immediately sobers and will not die tonight.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Recluse",
+        interaction:
+          "It's possible to wake the Recluse as if they were a Minion or Demon to allow them to change characters, but this is very rarely fun, so recommended against.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
+        title: "Undertaker",
+        interaction:
+          "The Undertaker learns the information that was true at the time of execution, regardless of whether the executed player's character changes afterwards.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939504832909434",
+        title: "Vigormortis",
+        interaction:
+          "A Demon that changes from a Vigormortis to something else while having killed Minions to maintain their abiities in death will cause those abilities to immediately be lost. However, if the Vigor stays in play, a Vigor-killed Minion can change character and continue to use their new ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1179939504832909434",
+        title: "Zombuul",
+        interaction:
+          "An already-dead player that chooses to become a Zombuul does not return to life as a once-killed Zombuul, they are already dead.",
+      },
+    ],
+  },
 ];

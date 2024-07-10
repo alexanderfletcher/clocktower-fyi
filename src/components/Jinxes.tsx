@@ -175,7 +175,7 @@ function InteractionCard(interestingInteraction: Interaction) {
               className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
               href={
                 type === "Character"
-                  ? `/characters/${getCharacterId(interestingInteraction.title)}`
+                  ? `/characters/${getCharacterId(interestingInteraction.title.toLocaleLowerCase())}`
                   : `https://wiki.bloodontheclocktower.com/States#Drunkenness_and_Poisoning`
               }
             >

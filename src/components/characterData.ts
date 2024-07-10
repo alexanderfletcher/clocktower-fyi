@@ -39,9 +39,9 @@ export const EDITION_NAMES = Object.keys(EDITION_NAME_MAPPER);
 
 export const getCharacterId = (characterName: string): string => {
   const character = CHARACTER_DATA.find(
-    (character) => character.name === characterName
+    (character) =>
+      character.name.toLocaleLowerCase() === characterName.toLocaleLowerCase()
   );
-
   if (!character) return "";
   return character.id;
 };
