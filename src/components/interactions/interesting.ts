@@ -711,4 +711,328 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       },
     ],
   },
+  {
+    id: "Vizier",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoned",
+        interaction: `If the Vizier is drunk or poisoned they may die during the day and cannot choose to execute immediately, but players don't learn this unless the Vizier attempts to do so.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Apprentice",
+        interaction: `An Apprentice Vizier acts just like a regular one, including the fact they do not die if exiled.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Atheist",
+        interaction: `The Storyteller can simulate a Vizier in an Atheist game, but the Vizier player hasn't got much incentive to play along as this confirms to them that it's an Atheist game, so it's best to choose the Atheist themselves for this purpose. This is because being announced as Vizier makes it less likely for them to be believed as Atheist right away, so many players will wait a day or two to try and point out other abnormalities from the Atheist ability.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Barber",
+        interaction: `If the Vizier character is swapped, all players immediately learn who the new Vizier is, if they are alive.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Barista",
+        interaction: `The Barista double has no effect on the Vizier.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Butcher",
+        interaction: `A Vizier can force a Butcher nomination in the same way as they can force a standard one.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Clockmaker",
+        interaction: ` The Clockmaker can be game-solving in single Minion games if the Vizier is in play. Script writers should consider this with care.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "Character",
+        title: "Clockmaker",
+        interaction: ` The Clockmaker can be game-solving in single Minion games if the Vizier is in play. Script writers should consider this with care.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715736513454112",
+      },
+      {
+        type: "General",
+        title: "Cult Leader/Fang Gu/Goon/Mezepheles/Politician",
+        interaction:
+          "A good Cult Leader can vote for everything the Vizier wants then be turned late in the game. Ditto Outsiders in a Fang Gu script (it doesn’t even have to be in play for the Vizier to promise it to an Outsider) or the Goon or Politician or a player that negotiates with the Mezepheles to keep the word until later. These plays are very rarely fun, even for the players directly involved, so it’s probably just worth agreeing in your group not to do so.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "Character",
+        title: "Doomsayer",
+        interaction:
+          "A Vizier cannot die to the Doomsayer, so evil players must be careful when Doomsaying with a Vizier in play lest they either kill their own Demon as the only remaining evil option to die or have no-one die because the ST targets the Vizier with the Doomsayer ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "General",
+        title: "Evil Twin/Goblin/Leviathan/Mastermind/Saint",
+        interaction: "Better be careful with your voting as good players!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "Character",
+        title: "Gunslinger",
+        interaction:
+          "If the Vizier chooses to execute before the Gunslinger has a chance to shoot, the Gunslinger gets no chance.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "Character",
+        title: "Judge",
+        interaction:
+          "The Judge can use their ability during or after votes, so might force a success before the Vizier can, but cannot force a failure if the Vizier has already forced a success.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "Character",
+        title: "Minstrel",
+        interaction:
+          "Viziers should be wary if they know they've allowed their fellow Minion to die by execution - they can be killed the next day if a Minstrel is in effect!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
+      },
+      {
+        type: "Character",
+        title: "Organ Grinder/Poppy Grower",
+        interaction:
+          "The Vizier doesn't necessarily know if good has voted and therefore doesn't know if they can force the execution, so if they try it might fail.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Pit-Hag",
+        interaction:
+          "If a Vizier is created, all players immediately learn who the new Vizier is. If an extant Vizier is made into another character, there is no public indication of this.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction:
+          "The Recluse can register as evil when the Vizier chooses to execute immediately and therefore for nothing to happen. This is rarely fun as it publicly confirms the Recluse.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Scapegoat",
+        interaction:
+          "A Scapegoat can take an execution that the Vizier forced through.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Spy",
+        interaction:
+          "The Spy can be the good vote that allows the Vizier to execute, but the Vizier cannot know if the Storyteller is going to allow the Spy to register as good, so cannot afford to try and force the execution based on the Spy's vote alone or they risk outing the Spy if the execution doesn't happen.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Thief",
+        interaction:
+          "A negative vote is still a vote and, if good, can allow the Vizier to force the execution.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Town Crier",
+        interaction:
+          "The Vizier can completely pollute Town Crier information by nominating freely every day – script writers should consider carefully before putting both on a script.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+      {
+        type: "Character",
+        title: "Vortox",
+        interaction:
+          "The knowledge that the Vizier is in play is not made false.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1098715900124864592",
+      },
+    ],
+  },
+  {
+    id: "Organ Grinder",
+    interactions: [
+      {
+        type: "General",
+        title: "Drunk/Poisoned",
+        interaction: `If the Organ Grinder is drunk or poisoned, votes occur as normal with eyes open and vote counts confirmed, the Storyteller will not ask people to close their eyes.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "General",
+        title: "Travellers",
+        interaction: ` Calls for exile are not votes, so the Organ Grinder does not affect them.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "Character",
+        title: "Beggar",
+        interaction: `The Beggar is still bound by their voting restriction, even though their eyes are closed.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "Character",
+        title: "Bishop",
+        interaction: `The votes on their nominations are still affected by the Organ Grinder.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "Character",
+        title: "Butcher",
+        interaction: `The votes on their nominations are still affected by the Organ Grinder.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "Character",
+        title: "Cult Leader",
+        interaction: `Cults are not votes, so the Organ Grinder does not interact with calls for cults.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "General",
+        title: "Public Actions",
+        interaction:
+          "Damsel/Doomsayer/Slayer: Public actions can be taken while players have their eyes closed to vote.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "General",
+        title: "Death Prevention",
+        interaction:
+          "Devil’s Advocate/Fool/Lleech/Pacifist/Sailor/Tea Lady: The death prevention happens when players are executed, so only matters at the point of execution, not during voting.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
+      },
+      {
+        type: "Character",
+        title: "Golem",
+        interaction: `Can confirm who the Organ Grinder is by nominating them after a blind vote has already happened that day and the consequent vote happening with eyes open. If the OG is killed between votes, this does not mean the town would learn who is on the block and with how many votes. Future nominations would simply be run open-eyed and results announced - "X votes is/is not enough and player B is/is not on the block" and the town would be able to work out the prior votes based on this information.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
+      },
+      {
+        type: "Character",
+        title: "Gunslinger",
+        interaction: ` Doesn’t work with the Organ Grinder. I’d recommend Storytellers don’t use the Gunslinger with an Organ Grinder on the script.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
+      },
+      {
+        type: "Character",
+        title: "Imp",
+        interaction: `An Imp that starpasses to an Organ Grinder will probably be found out pretty quick when there’s no Organ Grinder ability the next day!`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
+      },
+      {
+        type: "Character",
+        title: "Judge",
+        interaction: `A Judge forces a nomination to pass or fail, which is completely independent of the vote count, so the Judge can force a vote on an Organ Grinder to pass even if the Organ Grinder did not vote.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
+      },
+    ],
+  },
+  {
+    id: "Politician",
+    interactions: [
+      {
+        type: "Character",
+        title: "Atheist",
+        interaction: `A Politician who successfully makes the entire good team believe that the Atheist is evil and manages to get them to execute down to final 2 can be the only player that wins in an Atheist game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
+      },
+      {
+        type: "General",
+        title: "Duplicates",
+        interaction: `Cannibal/Philosopher/Pixie: With multiple Politician abilities in play, there can be multiple players playing for the evil team. However, only the most responsible player can change teams, so they’re in direct competition with one another. If any of these die while they have the Politician ability, they maintain the ability even if dead and can change alignments to win at the end of the game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
+      },
+      {
+        type: "Character",
+        title: "Heretic",
+        interaction: `The Politician's changing alignments is decided after the Heretic impacts the result of who actually won the game.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
+      },
+      {
+        type: "Character",
+        title: "Evil Twin",
+        interaction: `It's very rarely fun to make the Politician the good twin as they can campaign for their own execution, never mentioning that they’re a twin, then win the game with evil as a result (it's pretty hard to argue they weren't most responsible in that situation!)`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
+      },
+      {
+        type: "General",
+        title: "Alternate Win Conditions",
+        interaction: `Fearmonger/Leviathan/Mastermind: If the game ends due to the Fearmonger ability targeting the Politician or the Politician being executed second in a Leviathan game or on a Mastermind day, the good team loses. If you think that the Politician was nonetheless the main influence in causing this to happen, the Politician can change alignments and win with the evil team, this does not then cause the evil team to lose instead, the game end condition was already evaluated.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799506798415872",
+      },
+      {
+        type: "Character",
+        title: "Legion",
+        interaction: `Politician/Legion is not a fun combination - the Politician is incentivised to vote on literally any execution but their own and be the single good vote Legion needs to pass every vote – again it’s difficult to claim they weren’t most responsible here.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799506798415872",
+      },
+      {
+        type: "Character",
+        title: "Mezepheles",
+        interaction: `The Politician can say the Mezepheles word and then betray the evil team to win with good - they're not restricted to only switching from good to evil at the end of the game, it's also legitimate for them to switch the other way.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799506798415872",
+      },
+      {
+        type: "Character",
+        title: "Revolutionary",
+        interaction: `If a Politician is in a Revolutionary pair, it's the Politician who must be most responsible for the game end in order to potentially flip both players’ alignments, not the pair as a duo.`,
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1026799541112033311",
+      },
+    ],
+  },
 ];
