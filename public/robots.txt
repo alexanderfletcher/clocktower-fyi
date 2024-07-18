@@ -1,0 +1,9 @@
+//robots.txt
+
+# Block all crawlers for links
+User-agent: *
+Disallow: /speculated
+
+# Allow all crawlers
+User-agent: *
+Allow: /
