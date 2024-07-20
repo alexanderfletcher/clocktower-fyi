@@ -1,7 +1,5 @@
 "use client";
 
-import { z } from "zod";
-
 import { CharacterSelection } from "./Selection";
 import { useEffect, useState } from "react";
 

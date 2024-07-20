@@ -46,6 +46,8 @@ export const getCharacterId = (characterName: string): string => {
   return character.id;
 };
 
+export type CharacterName = (typeof CHARACTER_DATA)[number]["name"];
+
 export const CHARACTER_DATA = [
   {
     id: "washerwoman",
@@ -1925,4 +1927,4 @@ export const CHARACTER_DATA = [
     ability:
       "Once per day, you may choose to kill an alive neighbour, if your other alive neighbour agrees.",
   },
-];
+] as const;

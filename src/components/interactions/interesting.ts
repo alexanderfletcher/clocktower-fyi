@@ -1,3 +1,5 @@
+import { CharacterName } from "../characterData";
+
 export type InterestingInteractions = typeof INTERESTING_INTERACTIONS;
 
 export type Interaction =
@@ -9,7 +11,7 @@ export type Interaction =
     }
   | {
       type: "Character";
-      title: string;
+      title: CharacterName;
       interaction: string;
       source: string;
     };
@@ -77,7 +79,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         title: "Cannibal",
         interaction:
-          "If a good Ogre is executed, the Cannibal gains the Ogre ability, wakes to pick a player, and becomes the alignment of that player. They are not told their alignment. The next time a player dies to execution, the Cannibal loses the Ogre ability but stays the alignment of the player they chose for the rest of the game. If an evil Ogre is executed, the Cannibal is poisoned due to the Cannibal’s ability.",
+          "If a good Ogre is executed, the Cannibal gains the Ogre ability, wakes to pick a player, and becomes the alignment of that player. They are not told their alignment. The next time a player dies to execution, the Cannibal loses the Ogre ability but stays the alignment of the player they chose for the rest of the game. If an evil Ogre is executed, the Cannibal is poisoned due to the Cannibal's ability.",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1243339011020423180",
       },
@@ -93,7 +95,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         title: "Spy",
         interaction:
-          "The Spy does not see which player the Ogre selected, but may see the Ogre’s alignment.",
+          "The Spy does not see which player the Ogre selected, but may see the Ogre's alignment.",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1243339011020423180",
       },
@@ -101,7 +103,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         title: "Widow",
         interaction:
-          "The Widow does not see which player the Ogre selected, but may see the Ogre’s alignment.",
+          "The Widow does not see which player the Ogre selected, but may see the Ogre's alignment.",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1243339011020423180",
       },
@@ -151,7 +153,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         title: "Goon",
         interaction:
-          "Ouch. That’s not a good time. That’s a drunk Summoner, a Goon that turns evil and an evil team, including that Goon, that immediately loses (all assuming the Summoner is the first to select the Goon that night).",
+          "Ouch. That's not a good time. That's a drunk Summoner, a Goon that turns evil and an evil team, including that Goon, that immediately loses (all assuming the Summoner is the first to select the Goon that night).",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1220527415244226580",
       },
@@ -166,7 +168,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "General",
         title: "Revolutionary",
-        interaction: `It's worth thinking carefully before putting Summoner in a Revolutionary game that’s being played for accessibility reasons.`,
+        interaction: `It's worth thinking carefully before putting Summoner in a Revolutionary game that's being played for accessibility reasons.`,
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1220527415244226580",
       },
@@ -174,7 +176,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         title: "Zombuul",
         interaction:
-          "If the Summoner chooses a dead player to be the Zombuul, they’re already dead and do not become a registering-as-dead Zombuul, they are just dead and the good team wins.",
+          "If the Summoner chooses a dead player to be the Zombuul, they're already dead and do not become a registering-as-dead Zombuul, they are just dead and the good team wins.",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1220527415244226580",
       },
@@ -325,7 +327,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
           "https://discord.com/channels/569683781800296501/806885179389640757/1179939243171258368",
         title: "Fearmonger",
         interaction:
-          "If a player becomes a Fearmonger, their choices as their previous character aren’t relevant to the Fearmonger announcement, their first pick will cause an announcement regardless of who it is.",
+          "If a player becomes a Fearmonger, their choices as their previous character aren't relevant to the Fearmonger announcement, their first pick will cause an announcement regardless of who it is.",
       },
       {
         type: "Character",
@@ -341,13 +343,13 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
           "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
         title: "Lil' Monsta",
         interaction:
-          "A Lil’ Monsta holder would be able to choose another Demon, as usual for Demons. Jinx - If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight.",
+          "A Lil' Monsta holder would be able to choose another Demon, as usual for Demons. Jinx - If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight.",
       },
       {
         type: "Character",
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1179939424264523860",
-        title: "LLeech",
+        title: "Lleech",
         interaction:
           "A Lleech coming into play would immediately select a host, then follow that by choosing a kill.",
       },
@@ -774,13 +776,13 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "General",
         title: "Cult Leader/Fang Gu/Goon/Mezepheles/Politician",
         interaction:
-          "A good Cult Leader can vote for everything the Vizier wants then be turned late in the game. Ditto Outsiders in a Fang Gu script (it doesn’t even have to be in play for the Vizier to promise it to an Outsider) or the Goon or Politician or a player that negotiates with the Mezepheles to keep the word until later. These plays are very rarely fun, even for the players directly involved, so it’s probably just worth agreeing in your group not to do so.",
+          "A good Cult Leader can vote for everything the Vizier wants then be turned late in the game. Ditto Outsiders in a Fang Gu script (it doesn't even have to be in play for the Vizier to promise it to an Outsider) or the Goon or Politician or a player that negotiates with the Mezepheles to keep the word until later. These plays are very rarely fun, even for the players directly involved, so it's probably just worth agreeing in your group not to do so.",
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1098715870450159616",
       },
       {
         type: "Character",
-        title: "Doomsayer",
+        title: "Doomsayer" as any,
         interaction:
           "A Vizier cannot die to the Doomsayer, so evil players must be careful when Doomsaying with a Vizier in play lest they either kill their own Demon as the only remaining evil option to die or have no-one die because the ST targets the Vizier with the Doomsayer ability.",
         source:
@@ -940,7 +942,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "General",
         title: "Death Prevention",
         interaction:
-          "Devil’s Advocate/Fool/Lleech/Pacifist/Sailor/Tea Lady: The death prevention happens when players are executed, so only matters at the point of execution, not during voting.",
+          "Devil's Advocate/Fool/Lleech/Pacifist/Sailor/Tea Lady: The death prevention happens when players are executed, so only matters at the point of execution, not during voting.",
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1088581283606691990",
       },
@@ -954,14 +956,14 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "Character",
         title: "Gunslinger",
-        interaction: ` Doesn’t work with the Organ Grinder. I’d recommend Storytellers don’t use the Gunslinger with an Organ Grinder on the script.`,
+        interaction: ` Doesn't work with the Organ Grinder. I'd recommend Storytellers don't use the Gunslinger with an Organ Grinder on the script.`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
       },
       {
         type: "Character",
         title: "Imp",
-        interaction: `An Imp that starpasses to an Organ Grinder will probably be found out pretty quick when there’s no Organ Grinder ability the next day!`,
+        interaction: `An Imp that starpasses to an Organ Grinder will probably be found out pretty quick when there's no Organ Grinder ability the next day!`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1088581309439426620",
       },
@@ -987,7 +989,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "General",
         title: "Duplicates",
-        interaction: `Cannibal/Philosopher/Pixie: With multiple Politician abilities in play, there can be multiple players playing for the evil team. However, only the most responsible player can change teams, so they’re in direct competition with one another. If any of these die while they have the Politician ability, they maintain the ability even if dead and can change alignments to win at the end of the game.`,
+        interaction: `Cannibal/Philosopher/Pixie: With multiple Politician abilities in play, there can be multiple players playing for the evil team. However, only the most responsible player can change teams, so they're in direct competition with one another. If any of these die while they have the Politician ability, they maintain the ability even if dead and can change alignments to win at the end of the game.`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
       },
@@ -1001,7 +1003,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "Character",
         title: "Evil Twin",
-        interaction: `It's very rarely fun to make the Politician the good twin as they can campaign for their own execution, never mentioning that they’re a twin, then win the game with evil as a result (it's pretty hard to argue they weren't most responsible in that situation!)`,
+        interaction: `It's very rarely fun to make the Politician the good twin as they can campaign for their own execution, never mentioning that they're a twin, then win the game with evil as a result (it's pretty hard to argue they weren't most responsible in that situation!)`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1026799459377631242",
       },
@@ -1015,7 +1017,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "Character",
         title: "Legion",
-        interaction: `Politician/Legion is not a fun combination - the Politician is incentivised to vote on literally any execution but their own and be the single good vote Legion needs to pass every vote – again it’s difficult to claim they weren’t most responsible here.`,
+        interaction: `Politician/Legion is not a fun combination - the Politician is incentivised to vote on literally any execution but their own and be the single good vote Legion needs to pass every vote – again it's difficult to claim they weren't most responsible here.`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1026799506798415872",
       },
@@ -1029,9 +1031,252 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
       {
         type: "Character",
         title: "Revolutionary",
-        interaction: `If a Politician is in a Revolutionary pair, it's the Politician who must be most responsible for the game end in order to potentially flip both players’ alignments, not the pair as a duo.`,
+        interaction: `If a Politician is in a Revolutionary pair, it's the Politician who must be most responsible for the game end in order to potentially flip both players' alignments, not the pair as a duo.`,
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1026799541112033311",
+      },
+    ],
+  },
+  {
+    id: "Bounty Hunter",
+    interactions: [
+      {
+        type: "Character",
+        title: "Alchemist",
+        interaction:
+          "The Bounty Hunter can make the Alchemist evil, going full circle to have the Minion ability go back to being used by evil.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927788870320169",
+      },
+      {
+        type: "Character",
+        title: "Al-Hadikhia",
+        interaction:
+          "If the Bounty Hunter dies and is resurrected by the Al-Hadikhia (or anything else) they would be told an evil player that night. This may be the same as previously or a new evil player. If the evil player the Bounty Hunter saw dies, the Bounty Hunter sees a new player and then the previously seen player comes back to life through the Al-Hadikhia, the Bounty Hunter does not see another new player when that previously seen player dies again. (For example, BH sees X on N1. D1, X is executed, N2 BH sees Y but X is resurrected by Al-Hadikhia. D2 X is executed again. N3, BH does not get a new name, their current “known” evil player is still Y.)",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927788870320169",
+      },
+      {
+        type: "General",
+        title: "Gaining the ability during a game",
+        interaction:
+          "(Apprentice/Cannibal/Damsel/Philosopher/Pit-Hag/Pixie): If the Bounty Hunter dies and is resurrected by the Al-Hadikhia (or anything else) they would be told an evil player that night. This may be the same as previously or a new evil player. If the evil player the Bounty Hunter saw dies, the Bounty Hunter sees a new player and then the previously seen player comes back to life through the Al-Hadikhia, the Bounty Hunter does not see another new player when that previously seen player dies again. (For example, BH sees X on N1. D1, X is executed, N2 BH sees Y but X is resurrected by Al-Hadikhia. D2 X is executed again. N3, BH does not get a new name, their current “known” evil player is still Y.)",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927812706553886",
+      },
+      {
+        type: "Character",
+        title: "Barista",
+        interaction:
+          "A Bounty Hunter affected by a Barista 2 could learn 2 evil players in 1 night. They would learn another player when either of those 2 players died. This means the Bounty Hunter has 2 instances of their ability from that point on - when either 'client' dies, they learn a new name. It's usually a good idea to show them the same player after both 'client A' and 'client B' die, to restore the Bounty Hunter to knowing only a single player at a time from then on.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927812706553886",
+      },
+      {
+        type: "Character",
+        title: "Cannibal",
+        interaction:
+          "An evil Townsfolk who dies by execution will poison the Cannibal. A Cannibal that gains the Bounty Hunter ability does not have to see a player the original Bounty Hunter saw.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927812706553886",
+      },
+      {
+        type: "Character",
+        title: "Courtier",
+        interaction:
+          "Even if they choose the Bounty Hunter on Night 1, they cannot prevent the Townsfolk being turned evil as this is a setup ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927812706553886",
+      },
+      {
+        type: "Character",
+        title: "Cult Leader",
+        interaction:
+          "The Bounty Hunter cannot see the Cult Leader as their evil player on night 1 as the Cult Leader doesn’t change alignment until the end of the night and therefore will always be good when the Bounty Hunter wakes even if they will be turning evil later tonight. The only exception to this is if the Bounty Hunter themselves causes the Cult Leader to be turned evil at setup.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Damsel",
+        interaction:
+          "If the evil Townsfolk guesses the Damsel, nothing happens, because they are not a Minion. The guess is not used.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Dreamer",
+        interaction:
+          "Just because a Townsfolk is evil in a Bounty Hunter game, does not make that a legitimate “evil character” to show to the Dreamer, they should still see the relevant Townsfolk and a Minion/Demon token.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Drunk",
+        interaction:
+          "Whether the Bounty Hunter is the Drunk or Marionette must be decided before a Townsfolk is woken and told that they are evil (as a result of the Bounty Hunter ability). The Drunk and Marionette also are not valid Townsfolk to be turned evil through the Bounty Hunter ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Marionette",
+        interaction:
+          "Whether the Bounty Hunter is the Drunk or Marionette must be decided before a Townsfolk is woken and told that they are evil (as a result of the Bounty Hunter ability). The Drunk and Marionette also are not valid Townsfolk to be turned evil through the Bounty Hunter ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Engineer",
+        interaction:
+          "The evil Townsfolk is unaffected by the Engineer, as it is not a Minion or Demon.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927834751799347",
+      },
+      {
+        type: "Character",
+        title: "Farmer",
+        interaction:
+          "Even if the Farmer is evil, it's an alive good player that becomes the Farmer.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Fool",
+        interaction:
+          "If the Fool is the player known to a Bounty Hunter, the Bounty Hunter will not learn another player until the Fool actually dies for good (the second time they die), as the first time a Fool dies, they “don't”.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Goon",
+        interaction:
+          "The Bounty Hunter being shown the Goon is not “choosing” the Goon with their ability, so are not made drunk, nor do they flip the Goon.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Grandmother",
+        interaction:
+          "The Grandmother could not learn the evil Townsfolk as their grandchild, as the ability says they learn a good player.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Lil' Monsta",
+        interaction:
+          "The evil Townsfolk is not a Minion and doesn’t wake to choose the babysitter.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Lleech",
+        interaction:
+          "If the Lleech picks the Bounty Hunter or the BH-evil Townsfolk as host, this does not stop a player being made evil through the BH ability – this is a [setup] ability and has already occurred.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Magician",
+        interaction:
+          "The evil Townsfolk is unaffected by the Magician, as it is not a Minion or Demon.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927858906808360",
+      },
+      {
+        type: "Character",
+        title: "Mayor",
+        interaction:
+          "If no execution occurs while just 3 players including the Mayor live, and the Mayor is the evil Townsfolk, evil wins.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927881505701928",
+      },
+      {
+        type: "Character",
+        title: "No Dashii",
+        interaction:
+          "Would poison the evil Townsfolk – they are still Townsfolk despite being evil and therefore affected by the No Dashii ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927881505701928",
+      },
+      {
+        type: "Character",
+        title: "Poppy Grower",
+        interaction:
+          "The evil Townsfolk is not a Minion or Demon, so is not shown who the evil team is when the Poppy Grower dies.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927881505701928",
+      },
+      {
+        type: "Character",
+        title: "Professor",
+        interaction: "A Professor could resurrect an evil Townsfolk.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927881505701928",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction:
+          "The Bounty Hunter could learn the Recluse as their known evil player.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927881505701928",
+      },
+      {
+        type: "Character",
+        title: "Revolutionary",
+        interaction:
+          "The Revolutionary may cause a good player to register falsely, resulting in the Bounty Hunter learning them.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
+      },
+      {
+        type: "Character",
+        title: "Revolutionary",
+        interaction:
+          "Also, Revolutionary pairs are decided at setup, the same time as Bounty Hunter Evil Townsfolk. As such, if the two players in the pair are good, you cannot select either of them to become the Bounty Hunter evil Townsfolk. You could pair the evil Townsfolk with a Minion or Demon, however.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
+      },
+      {
+        type: "Character",
+        title: "Spy",
+        interaction:
+          "Technically can register as a Townsfolk in order to be made evil by the Bounty Hunter ability… Don't be a dick.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
+      },
+      {
+        type: "Character",
+        title: "Virgin",
+        interaction: "An evil Townsfolk could trigger the Virgin ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
+      },
+      {
+        type: "Character",
+        title: "Vortox",
+        interaction:
+          "The evil Townsfolk still gets false information in a Vortox game.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
+      },
+      {
+        type: "Character",
+        title: "Zombuul",
+        interaction:
+          "If a Bounty Hunter learns the Zombuul, and the Zombuul ‘dies’ for the first time, the Bounty Hunter will learn a different player despite the Zombuul still technically being alive.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1023927921016057906",
       },
     ],
   },

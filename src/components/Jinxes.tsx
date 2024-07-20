@@ -76,7 +76,7 @@ const findInteractionsForCharacter = (
           interaction: interaction.interaction,
           title: data.id,
           source: interaction.source,
-        };
+        } as Interaction;
       });
   };
 };
