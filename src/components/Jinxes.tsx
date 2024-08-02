@@ -76,6 +76,7 @@ const findInteractionsForCharacter = (
           interaction: interaction.interaction,
           title: data.id,
           source: interaction.source,
+          status: interaction.status,
         } as Interaction;
       });
   };
@@ -85,16 +86,17 @@ export function Jinxes({ character }: Props) {
   const initialCharacterJinxes = JINXES.filter((jinx) => {
     return jinx.id === character.name;
   }).flatMap(formatJinx(character.name));
-
   const otherCharacterJinxes = JINXES.filter((jinx) => {
     return jinx.jinx.find((info) => info.id === character.name) !== undefined;
   }).flatMap(formatOtherJinx(character.name));
 
   const initialCharacterInteractions = INTERESTING_INTERACTIONS.filter(
     (interaction) => {
-      return interaction.id === character.name;
+      return interaction.id === character.name && interaction;
     }
-  ).flatMap((interaction) => interaction.interactions);
+  )
+    .flatMap((interaction) => interaction.interactions)
+    .filter((interaction) => interaction.status !== "outdated");
 
   const otherCharacterInteractions = INTERESTING_INTERACTIONS.filter(
     (interaction) => {
@@ -104,8 +106,9 @@ export function Jinxes({ character }: Props) {
         ) !== undefined
       );
     }
-  ).flatMap(findInteractionsForCharacter(character.name));
-
+  )
+    .flatMap(findInteractionsForCharacter(character.name))
+    .filter((interaction) => interaction.status !== "outdated");
   const characterJinxes = [...initialCharacterJinxes, ...otherCharacterJinxes];
   const characterInteractions = [
     ...initialCharacterInteractions,

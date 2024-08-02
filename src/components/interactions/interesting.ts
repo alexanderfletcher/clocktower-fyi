@@ -8,12 +8,14 @@ export type Interaction =
       title: string;
       interaction: string;
       source: string;
+      status?: "outdated";
     }
   | {
       type: "Character";
       title: CharacterName;
       interaction: string;
       source: string;
+      status?: "outdated";
     };
 export type InterestingInteractionData = {
   id: string;
@@ -179,6 +181,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
           "If the Summoner chooses a dead player to be the Zombuul, they're already dead and do not become a registering-as-dead Zombuul, they are just dead and the good team wins.",
         source:
           "https://discordapp.com/channels/569683781800296501/806885179389640757/1220527415244226580",
+        status: "outdated",
       },
     ],
   },
