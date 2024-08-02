@@ -35,6 +35,11 @@ export const JINXES = [
         reason:
           "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct.",
       },
+      {
+        id: "Zealot",
+        reason:
+          "If the Cannibal gains the Zealot ability, the Cannibal learns this.",
+      },
     ],
   },
   {
@@ -227,6 +232,10 @@ export const JINXES = [
         id: "Hatter",
         reason:
           "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion.",
+      },
+      {
+        id: "Zealot",
+        reason: "The Zealot might register as evil to Legion's ability.",
       },
     ],
   },
@@ -672,6 +681,10 @@ export const JINXES = [
         reason:
           "If the Hatter dies, Riot is in play and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too.",
       },
+      {
+        id: "Zealot",
+        reason: "If you are nominated, you must nominate again, even if dead.",
+      },
     ],
   },
   {
@@ -745,6 +758,10 @@ export const JINXES = [
         id: "Alsaahir",
         reason:
           "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play.",
+      },
+      {
+        id: "Zealot",
+        reason: "The Zealot might register as evil to the Vizier.",
       },
     ],
   },

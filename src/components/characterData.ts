@@ -1927,4 +1927,16 @@ export const CHARACTER_DATA = [
     ability:
       "Once per day, you may choose to kill an alive neighbour, if your other alive neighbour agrees.",
   },
+  {
+    id: "zealot",
+    name: "Zealot",
+    edition: "",
+    team: "outsider",
+    firstNightReminder: "",
+    otherNightReminder: "",
+    reminders: [],
+    setup: false,
+    ability:
+      "If there are 5 or more players alive, you must vote for every nomination.",
+  },
 ] as const;
