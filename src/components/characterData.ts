@@ -6,6 +6,10 @@ export const characterNameToId = (
   return CHARACTER_DATA.find((char) => char.name === characterName)?.id;
 };
 
+export const getCharacterName = (characterId: string): string => {
+  return CHARACTER_DATA.find((char) => char.id === characterId)?.name || "";
+};
+
 export const editionToName = (edition: string): string => {
   return edition;
 };

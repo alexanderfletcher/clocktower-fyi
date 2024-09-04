@@ -2,6 +2,7 @@ import {
   CharacterData,
   characterNameToId,
   getCharacterId,
+  getCharacterName,
 } from "./characterData";
 import { JINXES, JinxData } from "./interactions/jinx";
 import {
@@ -84,11 +85,11 @@ const findInteractionsForCharacter = (
 
 export function Jinxes({ character }: Props) {
   const initialCharacterJinxes = JINXES.filter((jinx) => {
-    return jinx.id === character.name;
+    return jinx.id === character.id;
   }).flatMap(formatJinx(character.name));
   const otherCharacterJinxes = JINXES.filter((jinx) => {
-    return jinx.jinx.find((info) => info.id === character.name) !== undefined;
-  }).flatMap(formatOtherJinx(character.name));
+    return jinx.jinx.find((info) => info.id === character.id) !== undefined;
+  }).flatMap(formatOtherJinx(character.id));
 
   const initialCharacterInteractions = INTERESTING_INTERACTIONS.filter(
     (interaction) => {
@@ -135,14 +136,14 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
           <div className="flex">
             <Avatar className="self-center">
               <AvatarImage
-                src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterNameToId(jinxer)}.png`}
+                src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${jinxer}.png`}
               ></AvatarImage>
             </Avatar>
             <Link
               className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
-              href={`/characters/${getCharacterId(jinxer)}`}
+              href={`/characters/${jinxer}`}
             >
-              <h3 className="">{jinxer}</h3>
+              <h3 className="">{getCharacterName(jinxer)}</h3>
             </Link>
           </div>
           <Button asChild>
@@ -170,7 +171,7 @@ function InteractionCard(interestingInteraction: Interaction) {
             {type === "Character" && (
               <Avatar className="self-center">
                 <AvatarImage
-                  src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${characterNameToId(interestingInteraction.title)}.png`}
+                  src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${interestingInteraction.title}.png`}
                 ></AvatarImage>
               </Avatar>
             )}
