@@ -23,6 +23,107 @@ export type InterestingInteractionData = {
 };
 export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
   {
+    id: "Lord of Typhon",
+    interactions: [
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278857651039637635",
+        title: "Alsaahir",
+        interaction:
+          "Needs to remember to guess an extra Minion if they think it's a Lord Of Typhon game!",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278857651039637635",
+        title: "Balloonist",
+        interaction:
+          "If the Balloonist becomes a Minion during setup, the Outsider count is not impacted, because the Lord Of Typhon allows for any number of Outsiders to be in play.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278857651039637635",
+        title: "Baron",
+        interaction:
+          "Still adds 2 Outsiders at setup, but the Lord Of Typhon's setup ability means any number of Outsiders count may be in play. However, taking away all the Outsiders the Baron would have added is real sucky for the Baron, so please don't 🥺",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278857651039637635",
+        title: "Boomdandy",
+        interaction:
+          "As the Storyteller, be especially mindful with who you leave alive after a Boomdandy execution. If players know it’s a Lord Of Typhon game and only one player near the Boomdandy is alive, that would be very rough for the evil players.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278857651039637635",
+        title: "Bounty Hunter",
+        interaction:
+          "The Evil Townsfolk must be in the line at setup, and the Lord Of Typhon does not necessarily have to neighbor two Minions if there is an Evil Townsfolk in play at the start of the game. However, Evil Townsfolk who enter play after setup (due to a Mez word, Philo-Bounty Hunter, etc.) do not have to be in the line, as the line itself is a setup ability.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Chambermaid",
+        interaction:
+          "The Lord Of Typhon does not wake to their own ability on the first night. Minions learning that they are Minions is part of setup & also do not register to the Chambermaid (though they would register if they woke due to their own Minion ability).",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Magician",
+        interaction:
+          "The Minions see the Magician as the Demon, and the Demon sees the Magician as a Minion. In a Lord of Typhon game, if the Magician isn’t next to the line of evil characters, this may make the Magician obvious to the evil team. However, this can be useful - if the Magician senses that the evil team is coordinated, they’ll realize it’s a Lord of Typhon game, which can be exceptionally useful information for world-building.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Poppy Grower",
+        interaction:
+          "The Demon does not learn the Minions, but the Lord of Typhon knows that at least both of their neighbors are Minions, and can coordinate with the two players sitting directly next to them.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Recluse",
+        interaction:
+          "The Demon does not learn the Minions, but the Lord of Typhon knows that at least both of their neighbors are Minions, and can coordinate with the two players sitting directly next to them.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Spy",
+        interaction:
+          "The Demon does not learn the Minions, but the Lord of Typhon knows that at least both of their neighbors are Minions, and can coordinate with the two players sitting directly next to them.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Snake Charmer",
+        interaction:
+          "I shouldn’t have to say this, but because it’s been asked multiple times… If the Snake Charmer hits the Lord Of Typhon, no, their neighbors do not become evil Minions.",
+      },
+      {
+        type: "Character",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
+        title: "Snake Charmer",
+        interaction:
+          "The Soldier doesn’t have an active ability during setup, so they are not safe from becoming a Minion to the Lord Of Typhon.",
+      },
+    ],
+  },
+  {
     id: "Alsaahir",
     interactions: [
       {

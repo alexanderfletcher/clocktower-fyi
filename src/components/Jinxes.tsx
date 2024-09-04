@@ -171,7 +171,7 @@ function InteractionCard(interestingInteraction: Interaction) {
             {type === "Character" && (
               <Avatar className="self-center">
                 <AvatarImage
-                  src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${interestingInteraction.title}.png`}
+                  src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${getCharacterId(interestingInteraction.title)}.png`}
                 ></AvatarImage>
               </Avatar>
             )}
