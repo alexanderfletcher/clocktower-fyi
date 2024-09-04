@@ -1641,6 +1641,18 @@ export const CHARACTER_DATA = [
       "If you were the player most responsible for your team losing, you change alignment & win, even if dead.",
   },
   {
+    id: "zealot",
+    name: "Zealot",
+    edition: "",
+    team: "outsider",
+    firstNightReminder: "",
+    otherNightReminder: "",
+    reminders: [],
+    setup: false,
+    ability:
+      "If there are 5 or more players alive, you must vote for every nomination.",
+  },
+  {
     id: "hatter",
     name: "Hatter",
     edition: "",
@@ -1932,15 +1944,15 @@ export const CHARACTER_DATA = [
       "Once per day, you may choose to kill an alive neighbour, if your other alive neighbour agrees.",
   },
   {
-    id: "zealot",
-    name: "Zealot",
-    edition: "",
-    team: "outsider",
-    firstNightReminder: "",
-    otherNightReminder: "",
-    reminders: [],
-    setup: false,
+    id: "lordoftyphon",
+    firstNightReminder:
+      "Wake the players on either side of the Demon. Show them the 'You Are' card, the token of the Minion they now are, and a thumbs down to indicate they are evil.",
+    otherNightReminder:
+      "The Lord of Typhon points to a player. That player dies.",
+    reminders: ["Dead"],
+    name: "Lord of Typhon",
+    team: "demon",
     ability:
-      "If there are 5 or more players alive, you must vote for every nomination.",
+      "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? To +? Outsiders]",
   },
 ] as const;
