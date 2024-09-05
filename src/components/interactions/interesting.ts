@@ -117,7 +117,7 @@ export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
         type: "Character",
         source:
           "https://discord.com/channels/569683781800296501/806885179389640757/1278858468840702044",
-        title: "Snake Charmer",
+        title: "Soldier",
         interaction:
           "The Soldier doesn’t have an active ability during setup, so they are not safe from becoming a Minion to the Lord Of Typhon.",
       },
