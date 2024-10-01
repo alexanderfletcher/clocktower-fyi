@@ -66,7 +66,7 @@ export default function Home({ character }: CharacterPageProps) {
         <meta property="og:title" content={character.name} />
         <meta
           property="og:image"
-          content={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+          content={`/assets/icons/${character.id}.webp`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={character.name} />
@@ -76,7 +76,7 @@ export default function Home({ character }: CharacterPageProps) {
         />
         <meta
           name="twitter:image"
-          content={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+          content={`/assets/icons/${character.id}.webp`}
         />
         <link
           rel="canonical"
@@ -96,7 +96,7 @@ export default function Home({ character }: CharacterPageProps) {
         {character && (
           <>
             <Info
-              source={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${character.id}.png`}
+              source={`/assets/icons/${character.id}.webp`}
               data={character}
             />
             <Jinxes character={character} />

@@ -135,9 +135,7 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
         <div className="flex justify-between">
           <div className="flex">
             <Avatar className="self-center">
-              <AvatarImage
-                src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${jinxer}.png`}
-              ></AvatarImage>
+              <AvatarImage src={`/assets/icons/${jinxer}.webp`}></AvatarImage>
             </Avatar>
             <Link
               className="flex hover:underline justify-between self-center text-2xl font-semibold leading-none tracking-tight und"
@@ -171,7 +169,7 @@ function InteractionCard(interestingInteraction: Interaction) {
             {type === "Character" && (
               <Avatar className="self-center">
                 <AvatarImage
-                  src={`https://raw.githubusercontent.com/nicholas-eden/townsquare/develop/src/assets/icons/${getCharacterId(interestingInteraction.title)}.png`}
+                  src={`assets/icons/${getCharacterId(interestingInteraction.title)}.webp`}
                 ></AvatarImage>
               </Avatar>
             )}
