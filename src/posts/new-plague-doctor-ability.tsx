@@ -35,7 +35,7 @@ export const newPlagueDoctorAbility: Post = {
   _id: 2,
   date: "2024-06-25",
   description: "A new ability for the harpy has been revealed",
-  image: "/icons/plaguedoctor.png",
+  image: "/icons/plaguedoctor.webp",
   published: true,
   slug: "new-plague-doctor-ability-25-06-24",
   title: "Plague Doctor Ability Update",

@@ -23,6 +23,256 @@ export type InterestingInteractionData = {
 };
 export const INTERESTING_INTERACTIONS: InterestingInteractionData[] = [
   {
+    id: "Boffin",
+    interactions: [
+      {
+        type: "Character",
+        title: "Alchemist",
+        interaction:
+          "If the Alchemist has the Boffin ability, there are so, so many fun things you can do with it. Lots of abilities that are terrible for an evil Boffin to give the Demon are *fantastic* for a good Alchemist Boffin to give the Demon. Just don’t be too mean - this is a game, after all!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Alsaahir",
+        interaction:
+          "If the Demon has the Alsaahir ability, and they correctly guess the in-play Minion(s) and Demon(s), the good team wins. Unless it’s a Heretic game, this isn’t a helpful ability for the Boffin to give the Demon.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Amnesiac",
+        interaction: "Go nuts.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Atheist",
+        interaction:
+          "If the Demon has the Atheist ability, the Storyteller may break the rules. Pros",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Balloonist",
+        interaction:
+          "Gives the Demon useful information about which good players are Outsiders, and there might be an extra outsider in play, which the Demon doesn’t have to mention to anyone.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Banshee",
+        interaction:
+          "If the Demon with the Banshee ability dies, they have an active Banshee ability - but only as long as the Boffin is alive.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Bounty Hunter",
+        interaction:
+          "If the Demon has the Bounty Hunter ability, one Townsfolk is evil.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Cannibal",
+        interaction:
+          "If the Demon has the Cannibal ability, they gain the ability of the recently killed executee (on top of their Demon ability). If an evil player (not the Boffin) is executed, the Demon’s Cannibal ability is poisoned, but their Demon ability remains sober and healthy. If the Demon gains an ability (via their Cannibal ability) that could cause the Demon’s alignment to change, the Demon gains this ability but cannot turn good due to this ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289021937976213556",
+      },
+      {
+        type: "Character",
+        title: "Chambermaid",
+        interaction:
+          "The Boffin wakes to their own ability on the 1st night (when they learn what ability the Demon has). The Demon does not register to the Chambermaid if/when they wake to their good character ability, because they are waking due to the Boffin’s ability, not their Demon ability. However, the Demon still registers as waking to the Chambermaid any time they wake to their Demon ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Choirboy",
+        interaction:
+          "If the Demon has the Choirboy ability, there must be a King in play. Bonus",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Clockmaker",
+        interaction:
+          "In certain setups, the Storyteller could use the Clockmaker ability to tell the Demon where the Recluse is sitting. Or, in a Poppy Grower game, the Clockmaker ability could help the Demon narrow down where their Minion(s) might be.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Courtier",
+        interaction:
+          "Screwing with a good Townsfolk’s ability for 3 days and 3 nights? Don’t mind if we do!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Engineer",
+        interaction:
+          "If the Demon has the Engineer ability, they can change the composition of the evil team!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Exorcist",
+        interaction:
+          "Yes, if the Demon has the Exorcist ability and they pick themself, they will be told that they are the Exorcist and then they will not wake to their Demon ability that night.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022013285073008",
+      },
+      {
+        type: "Character",
+        title: "Hatter",
+        interaction:
+          "If the Demon has the Hatter ability and dies while the Boffin is sober & alive, the evil team can choose which Minion(s) and Demon(s) to be. If the Boffin and/or the Demon changes players, this is treated as a new iteration of the Boffin ability & the Demon’s good character ability can be refreshed.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "High Priestess",
+        interaction:
+          "Because the High Priestess ability lets the Storyteller tell the player with that ability who they should talk to most, the Storyteller can use this ability to help the Demon coordinate with evils and/or effectively bluff correct High Priestess information.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "King",
+        interaction:
+          "If the Demon has the King ability, and kills themself, the Choirboy learns that the player who died last night is the Demon.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "Librarian",
+        interaction:
+          "If the Demon has the Librarian ability, the Storyteller should be careful about what Outsider they show the Demon. Please do not show them the Damsel or the Heretic or anything else that would fundamentally break the game; most other Outsiders are fair game! Librarian is an especially great ability for a Fang Gu.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "Lycanthrope",
+        interaction:
+          "If the Demon has the Lycanthrope ability and they target a good player, their Demon kills will not go through that night. This can be especially fun for a Demon with a unique kill pattern (like the Shabaloth or Po) if they want to confuse the town about what Demon is in play.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "Philosopher",
+        interaction:
+          "If the Demon has & uses the Philosopher ability, an in-play Townsfolk with the ability the Demon-Philosopher gained would be drunked by the Demon’s Philosopher ability. However, if/when the Boffin is drunk, poisoned, or dies, the Demon loses the Philosopher ability, so the previously Philo-drunk Townsfolk is now sober.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022049104429067",
+      },
+      {
+        type: "Character",
+        title: "Pixie",
+        interaction:
+          "If the Demon has the Pixie ability and is mad about the Townsfolk they were shown via this ability, they will gain the ability shown when the player dies (as long as the Boffin is alive, sober, & healthy when that happens!)",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Poppy Grower",
+        interaction: "Great for an Alchemist Boffin, not so much otherwise.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Preacher",
+        interaction:
+          "If the Demon preaches the Boffin, they no longer have the Preacher ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Puzzlemaster",
+        interaction:
+          "If the Demon dies while they have the Puzzlemaster ability, the Puzzlemaster ability stays active. When the Boffin ability is no longer in play, the Puzzlemaster ability goes away.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Recluse",
+        interaction:
+          "The Recluse can get an ability from the Boffin! But if they do, the real Demon would not get an ability, which is a very poor use of a Minion. An Alchemist-Boffin, however...",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Sailor",
+        interaction:
+          "If the Demon chooses themself with their Sailor ability, their Sailor ability is drunk but their Demon ability is unaffected.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Snake Charmer",
+        interaction:
+          "If the Demon chooses themself with the Snake Charmer ability, the Demon swaps characters with themself (mechanically this doesn’t do anything, but technically that is what happens), and then their Snake Charmer ability is poisoned due to itself. The Demon ability is unaffected.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022102455848994",
+      },
+      {
+        type: "Character",
+        title: "Snitch",
+        interaction: "Gives the Minions bluffs!",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022138753482793",
+      },
+      {
+        type: "Character",
+        title: "Soldier",
+        interaction:
+          "If the Demon has the Soldier ability, they are safe from their Demon ability. If they are the Imp, this means they cannot kill themself to turn a Minion into the Imp, and if they are the Fang Gu, they cannot jump to an Outsider while they have the Soldier ability. Separately, the Soldier themself is safe from the Demon’s Boffin ability (e.g. if the Demon has the Virgin ability, the Soldier can not be executed and die by nominating the Demon).",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022138753482793",
+      },
+      {
+        type: "Character",
+        title: "Spy/Widow",
+        interaction:
+          "Can see what ability the Demon has because the token would be next to them on the grimoire.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022138753482793",
+      },
+      {
+        type: "Character",
+        title: "Sweetheart",
+        interaction:
+          "When the Demon dies, someone (ideally a good player) is drunk for as long as the Boffin has their ability.",
+        source:
+          "https://discord.com/channels/569683781800296501/806885179389640757/1289022138753482793",
+      },
+    ],
+  },
+  {
     id: "Lord of Typhon",
     interactions: [
       {

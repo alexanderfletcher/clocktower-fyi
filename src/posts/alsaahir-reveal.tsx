@@ -40,7 +40,7 @@ export const alsaahir: Post = {
   date: "2024-06-28",
   description:
     "Alsaahir(Townfolk): Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
-  image: "/icons/alsaahir.png",
+  image: "/icons/alsaahir.webp",
   published: true,
   slug: "alsahiir-28-06-24",
   title: "Alsaahir Revealed",

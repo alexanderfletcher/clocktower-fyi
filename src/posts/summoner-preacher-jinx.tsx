@@ -34,7 +34,7 @@ export const summonerPreacherJinx: Post = {
   _id: 3,
   date: "2024-06-24",
   description: "A new jinx for the summoner - preacher has been revealed",
-  image: "/icons/summoner.png",
+  image: "/icons/summoner.webp",
   published: true,
   slug: "summoner-preacher-jinx-24-06-24",
   title: "New Summoner - Preacher Jinx",

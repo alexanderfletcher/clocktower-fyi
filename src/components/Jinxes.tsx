@@ -169,7 +169,7 @@ function InteractionCard(interestingInteraction: Interaction) {
             {type === "Character" && (
               <Avatar className="self-center">
                 <AvatarImage
-                  src={`assets/icons/${getCharacterId(interestingInteraction.title)}.webp`}
+                  src={`/assets/icons/${getCharacterId(interestingInteraction.title)}.webp`}
                 ></AvatarImage>
               </Avatar>
             )}

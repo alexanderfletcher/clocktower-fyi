@@ -47,7 +47,7 @@ export const newBallonistAbility: Post = {
   _id: 5,
   date: "2024-06-21",
   description: "The balloonist has a new ability",
-  image: "/icons/balloonist.png",
+  image: "/icons/balloonist.webp",
   published: true,
   slug: "new-ballonist-ability-21-06-24",
   title: "New Balloonist Ability",
