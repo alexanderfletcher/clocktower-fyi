@@ -12,9 +12,10 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Button } from "./ui/button";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon, Link2Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "./ui/avatar";
+import { toast } from "sonner";
 import {
   INTERESTING_INTERACTIONS,
   Interaction,
@@ -129,8 +130,15 @@ export function Jinxes({ character }: Props) {
 }
 
 function JinxCard({ jinxer, reason }: IndividualJinxData) {
+  const id = getCharacterId(jinxer);
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(
+      `${window.location.origin}${window.location.pathname}#${id}`
+    );
+    toast("Link copied to clipboard");
+  };
   return (
-    <Card className="m-5">
+    <Card className="m-5" id={id}>
       <CardHeader>
         <div className="flex justify-between">
           <div className="flex">
@@ -144,11 +152,25 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
               <h3 className="">{getCharacterName(jinxer)}</h3>
             </Link>
           </div>
-          <Button asChild>
-            <Link href="https://wiki.bloodontheclocktower.com/Djinn">
-              <ExternalLinkIcon />
-            </Link>
-          </Button>
+          <div>
+            <Button asChild onClick={handleCopyLink} size="icon">
+              <div
+                style={{
+                  padding: "8px 16px 8px 16px",
+                  width: "unset",
+                  marginRight: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                <Link2Icon />
+              </div>
+            </Button>
+            <Button asChild>
+              <Link href="https://wiki.bloodontheclocktower.com/Djinn">
+                <ExternalLinkIcon />
+              </Link>
+            </Button>
+          </div>
         </div>
         <CardDescription>Jinx</CardDescription>
       </CardHeader>
@@ -161,8 +183,15 @@ function JinxCard({ jinxer, reason }: IndividualJinxData) {
 
 function InteractionCard(interestingInteraction: Interaction) {
   const { interaction, source, type, title } = interestingInteraction;
+  const id = getCharacterId(title);
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(
+      `${window.location.origin}${window.location.pathname}#${id}`
+    );
+    toast("Link copied to clipboard");
+  };
   return (
-    <Card className="m-5">
+    <Card className="m-5" id={id}>
       <CardHeader>
         <div className="flex justify-between">
           <div className="flex">
@@ -184,11 +213,25 @@ function InteractionCard(interestingInteraction: Interaction) {
               <h3 className="">{title}</h3>
             </Link>
           </div>
-          <Button asChild>
-            <Link href={source}>
-              <ExternalLinkIcon />
-            </Link>
-          </Button>
+          <div>
+            <Button asChild onClick={handleCopyLink} size="icon">
+              <div
+                style={{
+                  padding: "8px 16px 8px 16px",
+                  width: "unset",
+                  marginRight: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                <Link2Icon />
+              </div>
+            </Button>
+            <Button asChild>
+              <Link href={source}>
+                <ExternalLinkIcon />
+              </Link>
+            </Button>
+          </div>
         </div>
         <CardDescription>Interesting Interaction</CardDescription>
       </CardHeader>
